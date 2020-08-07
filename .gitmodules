@@ -1,0 +1,6 @@
+[submodule "PLCrashReporter"]
+	path = PLCrashReporter
+	url = git@source.datanerd.us:mobile/PLCrashReporter.git
+[submodule "modular-crash-reporter-ios"]
+	path = modular-crash-reporter-ios
+	url = git@source.datanerd.us:mobile/modular-crash-reporter-ios.git
