@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		02FF4B0A24DDC68A00115469 /* libMobileAgent */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 02FF4B0D24DDC68A00115469 /* Build configuration list for PBXAggregateTarget "libMobileAgent" */;
+			buildPhases = (
+				02FF4B1024DDF4BB00115469 /* Run Script */,
+			);
+			dependencies = (
+			);
+			name = libMobileAgent;
+			productName = libMobileAgent;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		021A15BF24C9EEE700E8DFD5 /* Agent.h in Headers */ = {isa = PBXBuildFile; fileRef = 021A15BD24C9EEE700E8DFD5 /* Agent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
@@ -396,6 +410,7 @@
 		02FF4B0624DC8CB200115469 /* reflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AFA24DC8CB200115469 /* reflection.h */; };
 		02FF4B0724DC8CB200115469 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AFB24DC8CB200115469 /* base.h */; };
 		02FF4B0824DC8F1200115469 /* libCrashReporter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AD924DC815400115469 /* libCrashReporter.a */; };
+		02FF4B1124E1CA0F00115469 /* NRMAAnalytics.h in Sources */ = {isa = PBXBuildFile; fileRef = 02FF485A24DC615A00115469 /* NRMAAnalytics.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -430,6 +445,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 05CD31510EE936A9000FDE88;
 			remoteInfo = "CrashReporter-iOS-Device";
+		};
+		02FF4B0E24DDC69600115469 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 021A15B124C9EEE700E8DFD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02FF4B0A24DDC68A00115469;
+			remoteInfo = libMobileAgent;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -856,6 +878,7 @@
 				02FF47D724DB54E600115469 /* Frameworks */,
 				021A15BC24C9EEE700E8DFD5 /* Agent */,
 				021A15BB24C9EEE700E8DFD5 /* Products */,
+				59AA4A3EC874908AEE69ECB0 /* scripts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1581,6 +1604,13 @@
 			path = flatbuffers;
 			sourceTree = "<group>";
 		};
+		59AA4A3EC874908AEE69ECB0 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1810,11 +1840,13 @@
 				021A15B624C9EEE700E8DFD5 /* Sources */,
 				021A15B724C9EEE700E8DFD5 /* Frameworks */,
 				021A15B824C9EEE700E8DFD5 /* Resources */,
+				02FF4B1524E1F04300115469 /* Capture environment variables */,
 			);
 			buildRules = (
 				02FF4AEE24DC8AD900115469 /* PBXBuildRule */,
 			);
 			dependencies = (
+				02FF4B0F24DDC69600115469 /* PBXTargetDependency */,
 				02FF4ADB24DC815800115469 /* PBXTargetDependency */,
 			);
 			name = Agent;
@@ -1832,6 +1864,9 @@
 				ORGANIZATIONNAME = "New Relic";
 				TargetAttributes = {
 					021A15B924C9EEE700E8DFD5 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					02FF4B0A24DDC68A00115469 = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
@@ -1856,6 +1891,7 @@
 			projectRoot = "";
 			targets = (
 				021A15B924C9EEE700E8DFD5 /* Agent */,
+				02FF4B0A24DDC68A00115469 /* libMobileAgent */,
 			);
 		};
 /* End PBXProject section */
@@ -1880,11 +1916,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02FF4B1024DDF4BB00115469 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/bash -x";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\nif [ $CONFIGURATION = \"Release\" ]; then\n  ./release_build.sh iphoneos \"${VALID_ARCHS}\"\nelse\n  ./build.sh iphoneos \"${VALID_ARCHS}\" \nfi \n\nif [ $? -eq 0 ]; then\n  frameworks=$(ls build/iphoneos | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/iphoneos/$framework ../Frameworks\n  done\nfi \n";
+		};
+		02FF4B1524E1F04300115469 /* Capture environment variables */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Capture environment variables";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"||||||\"\necho \"|||||| Generating xcode var list\"\necho \"||||||\"\n\necho config = ${CONFIGURATION}\necho action = $ACTION\nif [ ${CONFIGURATION} = \"Release\" ] && [ ${ACTION} = \"install\" ]; then\n    mkdir ${SRCROOT}/build\n    echo executing: ${SRCROOT}/scripts/generate_environment_items.py\n    python ${SRCROOT}/scripts/generate_environment_items.py\nfi\n\nmkdir -p ${PROJECT_DIR}/build\necho \"PROJECT_DIR='${PROJECT_DIR}'\" > ${PROJECT_DIR}/build/archive_paths.sh\necho \"BUILT_PRODUCTS_DIR='${BUILT_PRODUCTS_DIR}'\" >> ${PROJECT_DIR}/build/archive_paths.sh\necho \"WRAPPER_NAME='${WRAPPER_NAME}'\" >> ${PROJECT_DIR}/build/archive_paths.sh\necho \"EXECUTABLE_PATH='${EXECUTABLE_PATH}'\" >> ${PROJECT_DIR}/build/archive_paths.sh\necho \"EXECUTABLE_NAME='${EXECUTABLE_NAME}'\" >> ${PROJECT_DIR}/build/archive_paths.sh\necho \"CODESIGNING_FOLDER_PATH='${CODESIGNING_FOLDER_PATH}'\" >> ${PROJECT_DIR}/build/archive_paths.sh\n\npushd \"${BUILT_PRODUCTS_DIR}\"\n${PROJECT_DIR}/scripts/fixFrameworkSymlinks.sh ${PRODUCT_NAME}\npopd\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		021A15B624C9EEE700E8DFD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FF4B1124E1CA0F00115469 /* NRMAAnalytics.h in Sources */,
 				02FF49CA24DC62B800115469 /* NRMAMetricSet.m in Sources */,
 				02FF48E324DC622700115469 /* NRMAExceptionhandlerConstants.m in Sources */,
 				02FF49DB24DC636100115469 /* NRMATimedTraceSegment.m in Sources */,
@@ -2067,6 +2143,11 @@
 			name = "CrashReporter-iOS-Device";
 			targetProxy = 02FF4ADA24DC815800115469 /* PBXContainerItemProxy */;
 		};
+		02FF4B0F24DDC69600115469 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02FF4B0A24DDC68A00115469 /* libMobileAgent */;
+			targetProxy = 02FF4B0E24DDC69600115469 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -2191,7 +2272,7 @@
 		021A15C324C9EEE700E8DFD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RQZ9D969HD;
@@ -2228,7 +2309,7 @@
 		021A15C424C9EEE700E8DFD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RQZ9D969HD;
@@ -2262,6 +2343,24 @@
 			};
 			name = Release;
 		};
+		02FF4B0B24DDC68A00115469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQZ9D969HD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		02FF4B0C24DDC68A00115469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQZ9D969HD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2279,6 +2378,15 @@
 			buildConfigurations = (
 				021A15C324C9EEE700E8DFD5 /* Debug */,
 				021A15C424C9EEE700E8DFD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02FF4B0D24DDC68A00115469 /* Build configuration list for PBXAggregateTarget "libMobileAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FF4B0B24DDC68A00115469 /* Debug */,
+				02FF4B0C24DDC68A00115469 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

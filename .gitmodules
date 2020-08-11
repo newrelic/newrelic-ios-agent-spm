@@ -4,3 +4,6 @@
 [submodule "modular-crash-reporter-ios"]
 	path = modular-crash-reporter-ios
 	url = git@source.datanerd.us:mobile/modular-crash-reporter-ios.git
+[submodule "libMobileAgent"]
+	path = libMobileAgent
+	url = git@source.datanerd.us:mobile/libMobileAgent.git
