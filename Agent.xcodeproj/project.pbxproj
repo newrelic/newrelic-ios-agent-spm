@@ -407,7 +407,7 @@
 		02FF4AE524DC894D00115469 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE424DC894D00115469 /* Utilities.framework */; };
 		02FF4AE724DC897A00115469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE624DC897900115469 /* Foundation.framework */; };
 		02FF4AE924DC898000115469 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE824DC898000115469 /* libc++.tbd */; };
-		02FF4AEB24DC898900115469 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AEA24DC898800115469 /* CoreTelephony.framework */; };
+		02FF4AEB24DC898900115469 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AEA24DC898800115469 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		02FF4AED24DC899500115469 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AEC24DC899500115469 /* SystemConfiguration.framework */; };
 		02FF4AFC24DC8CB200115469 /* grpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AF024DC8CB200115469 /* grpc.h */; };
 		02FF4AFD24DC8CB200115469 /* idl.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AF124DC8CB200115469 /* idl.h */; };
@@ -2661,7 +2661,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/bash -x";
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\nif [ $CONFIGURATION = \"Release\" ]; then\n  ./release_build.sh iphoneos \"${VALID_ARCHS}\"\nelse\n  ./build.sh iphoneos \"${VALID_ARCHS}\" \nfi \n\nif [ $? -eq 0 ]; then\n  frameworks=$(ls build/iphoneos | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/iphoneos/$framework ../Frameworks\n  done\nfi \n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\nif [ $CONFIGURATION = \"Release\" ]; then\n  ./release_build.sh ${PLATFORM_NAME} \"${VALID_ARCHS}\"\nelse\n  ./build.sh ${PLATFORM_NAME} \"${VALID_ARCHS}\" \nfi \n\nif [ $? -eq 0 ]; then\n  frameworks=$(ls build/$PLATFORM_NAME | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/${PLATFORM_NAME}/$framework ../Frameworks\n  done\nfi \n";
 		};
 		02FF4B1524E1F04300115469 /* Capture environment variables */ = {
 			isa = PBXShellScriptBuildPhase;
