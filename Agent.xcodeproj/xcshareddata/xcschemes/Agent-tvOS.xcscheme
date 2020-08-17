@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02FF4B1824E3201400115469"
-               BuildableName = "Agent_tvos.framework"
+               BuildableName = "NewRelic.framework"
                BlueprintName = "Agent_tvos"
                ReferencedContainer = "container:Agent.xcodeproj">
             </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02FF4B1824E3201400115469"
-            BuildableName = "Agent_tvos.framework"
+            BuildableName = "NewRelic.framework"
             BlueprintName = "Agent_tvos"
             ReferencedContainer = "container:Agent.xcodeproj">
          </BuildableReference>

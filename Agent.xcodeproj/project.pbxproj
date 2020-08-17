@@ -236,6 +236,21 @@
 		0256585924EB19BF00FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		0256585B24EB19BF00FE3125 /* testUploadFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0209ABAE24E7042C00E45C90 /* testUploadFile.txt */; };
 		0256585C24EB19BF00FE3125 /* JdAWN9v.png in Resources */ = {isa = PBXBuildFile; fileRef = 0209ACC024EB015D00E45C90 /* JdAWN9v.png */; };
+		025658AB24EB2AAC00FE3125 /* Stress_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658AA24EB2AAC00FE3125 /* Stress_Tests.m */; };
+		025658BC24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */; };
+		025658C024EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658BE24EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m */; };
+		025658C124EB2EE900FE3125 /* NRMAAnalyticsControllerStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658BF24EB2EE900FE3125 /* NRMAAnalyticsControllerStressor.m */; };
+		025658C424EB2F3100FE3125 /* NRMAHarvestControllerStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658C324EB2F3100FE3125 /* NRMAHarvestControllerStressor.m */; };
+		025658C924EB2F4700FE3125 /* NRMAMeasurementPoolStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658C624EB2F4600FE3125 /* NRMAMeasurementPoolStressor.m */; };
+		025658CA24EB2F4700FE3125 /* NRMATaskQueueStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658C724EB2F4700FE3125 /* NRMATaskQueueStressor.m */; };
+		025658CB24EB2F4700FE3125 /* NRMAMeasurementsStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658C824EB2F4700FE3125 /* NRMAMeasurementsStressor.m */; };
+		025658CF24EB2F5B00FE3125 /* NRMAMeasurementProducerStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658CE24EB2F5B00FE3125 /* NRMAMeasurementProducerStressor.m */; };
+		025658D324EB2F6400FE3125 /* NRMAMeasurementConsumerStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658D024EB2F6400FE3125 /* NRMAMeasurementConsumerStressor.m */; };
+		025658D424EB2F6400FE3125 /* NRMASummaryMeasurementConsumerStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658D124EB2F6400FE3125 /* NRMASummaryMeasurementConsumerStressor.m */; };
+		025658D524EB2F6400FE3125 /* NRMAActivityTraceMeasurementCreatorStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658D224EB2F6400FE3125 /* NRMAActivityTraceMeasurementCreatorStressor.m */; };
+		025658D824EB322F00FE3125 /* NRMAStressTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */; };
+		025658DC24EB34CF00FE3125 /* NewRelic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021A15BA24C9EEE700E8DFD5 /* NewRelic.framework */; };
+		025658DD24EB350300FE3125 /* NRAgentTestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABAC24E7042C00E45C90 /* NRAgentTestBase.m */; };
 		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
 		02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
@@ -1068,6 +1083,13 @@
 			remoteGlobalIDString = 02FF4B1824E3201400115469;
 			remoteInfo = Agent_tvos;
 		};
+		025658DA24EB34C800FE3125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 021A15B124C9EEE700E8DFD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 021A15B924C9EEE700E8DFD5;
+			remoteInfo = Agent_iOS;
+		};
 		02FF4AD824DC815400115469 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */;
@@ -1254,6 +1276,22 @@
 		021A15BE24C9EEE700E8DFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agent_tvos_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0256586124EB19BF00FE3125 /* Agent_Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Agent_Tests copy-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/Agent_Tests copy-Info.plist"; sourceTree = "<absolute>"; };
+		025658A824EB2AAC00FE3125 /* Stress Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stress Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		025658AA24EB2AAC00FE3125 /* Stress_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stress_Tests.m; sourceTree = "<group>"; };
+		025658AC24EB2AAC00FE3125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NRMAHandledExcaptionStressor.mm; sourceTree = "<group>"; };
+		025658BE24EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAAnalyticsLifecycleTest.m; sourceTree = "<group>"; };
+		025658BF24EB2EE900FE3125 /* NRMAAnalyticsControllerStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAAnalyticsControllerStressor.m; sourceTree = "<group>"; };
+		025658C324EB2F3100FE3125 /* NRMAHarvestControllerStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAHarvestControllerStressor.m; sourceTree = "<group>"; };
+		025658C624EB2F4600FE3125 /* NRMAMeasurementPoolStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAMeasurementPoolStressor.m; sourceTree = "<group>"; };
+		025658C724EB2F4700FE3125 /* NRMATaskQueueStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMATaskQueueStressor.m; sourceTree = "<group>"; };
+		025658C824EB2F4700FE3125 /* NRMAMeasurementsStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAMeasurementsStressor.m; sourceTree = "<group>"; };
+		025658CE24EB2F5B00FE3125 /* NRMAMeasurementProducerStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAMeasurementProducerStressor.m; sourceTree = "<group>"; };
+		025658D024EB2F6400FE3125 /* NRMAMeasurementConsumerStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAMeasurementConsumerStressor.m; sourceTree = "<group>"; };
+		025658D124EB2F6400FE3125 /* NRMASummaryMeasurementConsumerStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMASummaryMeasurementConsumerStressor.m; sourceTree = "<group>"; };
+		025658D224EB2F6400FE3125 /* NRMAActivityTraceMeasurementCreatorStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAActivityTraceMeasurementCreatorStressor.m; sourceTree = "<group>"; };
+		025658D624EB322F00FE3125 /* NRMAStressTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRMAStressTestHelper.h; sourceTree = "<group>"; };
+		025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAStressTestHelper.m; sourceTree = "<group>"; };
 		02FF47C524DB53F400115469 /* json.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = json.framework; sourceTree = "<group>"; };
 		02FF47C624DB53F500115469 /* Hex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hex.framework; sourceTree = "<group>"; };
 		02FF47C724DB53F500115469 /* Connectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Connectivity.framework; sourceTree = "<group>"; };
@@ -1698,6 +1736,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		025658A524EB2AAC00FE3125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				025658DC24EB34CF00FE3125 /* NewRelic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02FF4C9B24E3201400115469 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1717,14 +1763,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0209ABA524E703F000E45C90 /* UnitTests */ = {
+		0209ABA524E703F000E45C90 /* Unit-Tests */ = {
 			isa = PBXGroup;
 			children = (
 				0209ABA824E7041900E45C90 /* NewRelicAgentTests */,
 				0209ABA724E7041000E45C90 /* NRInstrumentationTests */,
 				0209ABA624E7040900E45C90 /* Shared */,
 			);
-			path = UnitTests;
+			path = "Unit-Tests";
 			sourceTree = "<group>";
 		};
 		0209ABA624E7040900E45C90 /* Shared */ = {
@@ -1734,9 +1780,6 @@
 				0209AC6324E738D400E45C90 /* NRTestConstants.h */,
 				0209AC6024E7373100E45C90 /* NRTestHelperConsumer.h */,
 				0209AC6124E7373200E45C90 /* NRTestHelperConsumer.m */,
-				0209ABAA24E7042B00E45C90 /* libOCMock.a */,
-				0209ABAB24E7042B00E45C90 /* NRAgentTestBase.h */,
-				0209ABAC24E7042C00E45C90 /* NRAgentTestBase.m */,
 				0209ABA924E7042B00E45C90 /* NRMeasurementConsumerHelper.h */,
 				0209ABAD24E7042C00E45C90 /* NRMeasurementConsumerHelper.m */,
 				0209ABAE24E7042C00E45C90 /* testUploadFile.txt */,
@@ -1760,7 +1803,6 @@
 			isa = PBXGroup;
 			children = (
 				0209AC6424E7391000E45C90 /* Uncategorized */,
-				0209AC5824E70BB300E45C90 /* OCMock */,
 				0209ABDD24E706B300E45C90 /* Instrumentation-Tests */,
 				0209ABD024E7069B00E45C90 /* Handled-Exception-Tests */,
 				0209ABCF24E7068B00E45C90 /* Trace-Tests */,
@@ -2034,10 +2076,11 @@
 		021A15B024C9EEE700E8DFD5 = {
 			isa = PBXGroup;
 			children = (
-				0209ABA524E703F000E45C90 /* UnitTests */,
+				0256586424EB284600FE3125 /* Tests */,
 				02FF4AEF24DC8CB200115469 /* flatbuffers */,
 				02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */,
 				0209ABB924E7054800E45C90 /* Agent_Tests */,
+				025658A924EB2AAC00FE3125 /* Stress Tests */,
 				02FF47D724DB54E600115469 /* Frameworks */,
 				021A15BC24C9EEE700E8DFD5 /* Agent */,
 				021A15BB24C9EEE700E8DFD5 /* Products */,
@@ -2054,6 +2097,7 @@
 				02FF4CAC24E3201400115469 /* NewRelic.framework */,
 				0209ABB824E7054800E45C90 /* Agent_Tests.xctest */,
 				0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */,
+				025658A824EB2AAC00FE3125 /* Stress Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2082,6 +2126,104 @@
 				021A15BE24C9EEE700E8DFD5 /* Info.plist */,
 			);
 			path = Agent;
+			sourceTree = "<group>";
+		};
+		0256586424EB284600FE3125 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				025658D924EB333800FE3125 /* Shared */,
+				0256586524EB285600FE3125 /* Stress-Tests */,
+				0209ABA524E703F000E45C90 /* Unit-Tests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0256586524EB285600FE3125 /* Stress-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				025658D624EB322F00FE3125 /* NRMAStressTestHelper.h */,
+				025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */,
+				025658C524EB2F3300FE3125 /* Measurement Engine Stress Tests */,
+				025658C224EB2EF300FE3125 /* Harvester Stress Tests */,
+				025658BD24EB2ED900FE3125 /* Analytics Stress Tests */,
+				025658BA24EB2E7900FE3125 /* Handled Exception Tests */,
+			);
+			path = "Stress-Tests";
+			sourceTree = "<group>";
+		};
+		025658A924EB2AAC00FE3125 /* Stress Tests */ = {
+			isa = PBXGroup;
+			children = (
+				025658AA24EB2AAC00FE3125 /* Stress_Tests.m */,
+				025658AC24EB2AAC00FE3125 /* Info.plist */,
+			);
+			path = "Stress Tests";
+			sourceTree = "<group>";
+		};
+		025658BA24EB2E7900FE3125 /* Handled Exception Tests */ = {
+			isa = PBXGroup;
+			children = (
+				025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */,
+			);
+			path = "Handled Exception Tests";
+			sourceTree = "<group>";
+		};
+		025658BD24EB2ED900FE3125 /* Analytics Stress Tests */ = {
+			isa = PBXGroup;
+			children = (
+				025658BF24EB2EE900FE3125 /* NRMAAnalyticsControllerStressor.m */,
+				025658BE24EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m */,
+			);
+			path = "Analytics Stress Tests";
+			sourceTree = "<group>";
+		};
+		025658C224EB2EF300FE3125 /* Harvester Stress Tests */ = {
+			isa = PBXGroup;
+			children = (
+				025658C324EB2F3100FE3125 /* NRMAHarvestControllerStressor.m */,
+			);
+			path = "Harvester Stress Tests";
+			sourceTree = "<group>";
+		};
+		025658C524EB2F3300FE3125 /* Measurement Engine Stress Tests */ = {
+			isa = PBXGroup;
+			children = (
+				025658CD24EB2F5100FE3125 /* Producer */,
+				025658CC24EB2F4A00FE3125 /* Consumer */,
+				025658C624EB2F4600FE3125 /* NRMAMeasurementPoolStressor.m */,
+				025658C824EB2F4700FE3125 /* NRMAMeasurementsStressor.m */,
+				025658C724EB2F4700FE3125 /* NRMATaskQueueStressor.m */,
+			);
+			path = "Measurement Engine Stress Tests";
+			sourceTree = "<group>";
+		};
+		025658CC24EB2F4A00FE3125 /* Consumer */ = {
+			isa = PBXGroup;
+			children = (
+				025658D224EB2F6400FE3125 /* NRMAActivityTraceMeasurementCreatorStressor.m */,
+				025658D024EB2F6400FE3125 /* NRMAMeasurementConsumerStressor.m */,
+				025658D124EB2F6400FE3125 /* NRMASummaryMeasurementConsumerStressor.m */,
+			);
+			path = Consumer;
+			sourceTree = "<group>";
+		};
+		025658CD24EB2F5100FE3125 /* Producer */ = {
+			isa = PBXGroup;
+			children = (
+				025658CE24EB2F5B00FE3125 /* NRMAMeasurementProducerStressor.m */,
+			);
+			path = Producer;
+			sourceTree = "<group>";
+		};
+		025658D924EB333800FE3125 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0209ABAB24E7042B00E45C90 /* NRAgentTestBase.h */,
+				0209ABAC24E7042C00E45C90 /* NRAgentTestBase.m */,
+				0209AC5824E70BB300E45C90 /* OCMock */,
+				0209ABAA24E7042B00E45C90 /* libOCMock.a */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		02FF47C824DB53F500115469 /* json_headers */ = {
@@ -3273,6 +3415,24 @@
 			productReference = 0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		025658A724EB2AAC00FE3125 /* Stress Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 025658AD24EB2AAC00FE3125 /* Build configuration list for PBXNativeTarget "Stress Tests" */;
+			buildPhases = (
+				025658A424EB2AAC00FE3125 /* Sources */,
+				025658A524EB2AAC00FE3125 /* Frameworks */,
+				025658A624EB2AAC00FE3125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				025658DB24EB34C800FE3125 /* PBXTargetDependency */,
+			);
+			name = "Stress Tests";
+			productName = "Stress Tests";
+			productReference = 025658A824EB2AAC00FE3125 /* Stress Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		02FF4B1824E3201400115469 /* Agent_tvos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02FF4CA924E3201400115469 /* Build configuration list for PBXNativeTarget "Agent_tvos" */;
@@ -3311,6 +3471,9 @@
 					021A15B924C9EEE700E8DFD5 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					025658A724EB2AAC00FE3125 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					02FF4B0A24DDC68A00115469 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -3341,6 +3504,7 @@
 				0253762A24E33C6A00BF220A /* libMobileAgent_tvOS */,
 				0209ABB724E7054800E45C90 /* Agent_Tests */,
 				025657F124EB19BF00FE3125 /* Agent_tvos_Tests */,
+				025658A724EB2AAC00FE3125 /* Stress Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -3385,6 +3549,13 @@
 			files = (
 				0256585B24EB19BF00FE3125 /* testUploadFile.txt in Resources */,
 				0256585C24EB19BF00FE3125 /* JdAWN9v.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		025658A624EB2AAC00FE3125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3843,6 +4014,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		025658A424EB2AAC00FE3125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				025658C024EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m in Sources */,
+				025658CB24EB2F4700FE3125 /* NRMAMeasurementsStressor.m in Sources */,
+				025658C124EB2EE900FE3125 /* NRMAAnalyticsControllerStressor.m in Sources */,
+				025658CF24EB2F5B00FE3125 /* NRMAMeasurementProducerStressor.m in Sources */,
+				025658C424EB2F3100FE3125 /* NRMAHarvestControllerStressor.m in Sources */,
+				025658D524EB2F6400FE3125 /* NRMAActivityTraceMeasurementCreatorStressor.m in Sources */,
+				025658DD24EB350300FE3125 /* NRAgentTestBase.m in Sources */,
+				025658D424EB2F6400FE3125 /* NRMASummaryMeasurementConsumerStressor.m in Sources */,
+				025658D824EB322F00FE3125 /* NRMAStressTestHelper.m in Sources */,
+				025658AB24EB2AAC00FE3125 /* Stress_Tests.m in Sources */,
+				025658BC24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm in Sources */,
+				025658D324EB2F6400FE3125 /* NRMAMeasurementConsumerStressor.m in Sources */,
+				025658C924EB2F4700FE3125 /* NRMAMeasurementPoolStressor.m in Sources */,
+				025658CA24EB2F4700FE3125 /* NRMATaskQueueStressor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02FF4BEE24E3201400115469 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4039,6 +4231,11 @@
 			isa = PBXTargetDependency;
 			target = 02FF4B1824E3201400115469 /* Agent_tvos */;
 			targetProxy = 0256586224EB1B6600FE3125 /* PBXContainerItemProxy */;
+		};
+		025658DB24EB34C800FE3125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 021A15B924C9EEE700E8DFD5 /* Agent_iOS */;
+			targetProxy = 025658DA24EB34C800FE3125 /* PBXContainerItemProxy */;
 		};
 		02FF4ADB24DC815800115469 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4461,6 +4658,70 @@
 			};
 			name = Release;
 		};
+		025658AE24EB2AAC00FE3125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQZ9D969HD;
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/UnitTests/",
+					"${SRCROOT}/**",
+				);
+				INFOPLIST_FILE = "Stress Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnitTests/Shared",
+					"${PROJECT_DIR}/Tests/Shared",
+					"${PROJECT_DIR}",
+					"${SRCROOT}",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					Tests/Shared/libOCMock.a,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newrelic.Stress-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		025658AF24EB2AAC00FE3125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RQZ9D969HD;
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/UnitTests/",
+					"${SRCROOT}/**",
+				);
+				INFOPLIST_FILE = "Stress Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnitTests/Shared",
+					"${PROJECT_DIR}/Tests/Shared",
+					"${PROJECT_DIR}",
+					"${SRCROOT}",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					Tests/Shared/libOCMock.a,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.newrelic.Stress-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		02FF4B0B24DDC68A00115469 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4607,6 +4868,15 @@
 			buildConfigurations = (
 				0256585E24EB19BF00FE3125 /* Debug */,
 				0256585F24EB19BF00FE3125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		025658AD24EB2AAC00FE3125 /* Build configuration list for PBXNativeTarget "Stress Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				025658AE24EB2AAC00FE3125 /* Debug */,
+				025658AF24EB2AAC00FE3125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
