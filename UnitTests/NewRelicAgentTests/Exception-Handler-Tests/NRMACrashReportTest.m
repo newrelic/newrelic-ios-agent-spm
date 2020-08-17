@@ -45,7 +45,7 @@
                                                     AnalyticsEvents:nil];
 
 #if TARGET_OS_TV
-    XCTAssertTrue([[report JSON Object][kNRMA_CR_platformKey] isEqualToString:NRMA_OSNAME_TVOS]);
+    XCTAssertTrue([[report JSONObject][kNRMA_CR_platformKey] isEqualToString:NRMA_OSNAME_TVOS]);
 #else
     XCTAssertTrue([[report JSONObject][kNRMA_CR_platformKey] isEqualToString:NRMA_OSNAME_IOS]);
 #endif
