@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "021A15B924C9EEE700E8DFD5"
-               BuildableName = "Agent_iOS.framework"
+               BuildableName = "NewRelic.framework"
                BlueprintName = "Agent_iOS"
                ReferencedContainer = "container:Agent.xcodeproj">
             </BuildableReference>
@@ -28,6 +28,21 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0209ABB724E7054800E45C90"
+               BuildableName = "Agent_Tests.xctest"
+               BlueprintName = "Agent_Tests"
+               ReferencedContainer = "container:Agent.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "Agent_Tests">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -51,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "021A15B924C9EEE700E8DFD5"
-            BuildableName = "Agent_iOS.framework"
+            BuildableName = "NewRelic.framework"
             BlueprintName = "Agent_iOS"
             ReferencedContainer = "container:Agent.xcodeproj">
          </BuildableReference>

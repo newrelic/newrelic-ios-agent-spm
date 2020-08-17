@@ -4,7 +4,7 @@
 //  Copyright (c) 2014 New Relic. All rights reserved.
 //
 
-#import <NewRelicAgent/NewRelic.h>
+#import "NewRelic.h"
 
 
 @interface NewRelicAgent(Development)

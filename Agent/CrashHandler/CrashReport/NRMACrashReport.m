@@ -58,7 +58,7 @@
     jsonDictionary[kNRMA_CR_timestampKey] = self.timestamp?:[NSNull null];
     jsonDictionary[kNRMA_CR_appTokenKey] = self.appToken?:[NSNull null];
     jsonDictionary[kNRMA_CR_dataToken] = dataToken?:[NSNull null];
-    jsonDictionary[kNRMA_CR_deviceInfoKey] = [self.deviceInfo JSONObject]?:[NSNull null];
+    jsonDictionary[kNRMA_CR_deviceInfoKey] = [self.deviceInfo  JSONObject]?:[NSNull null];
     jsonDictionary[kNRMA_CR_appInfoKey] = [self.appInfo JSONObject]?:[NSNull null];
     jsonDictionary[kNRMA_CR_exceptionKey] = [self.exception JSONObject]?:[NSNull null];
 
