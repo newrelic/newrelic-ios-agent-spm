@@ -1,8 +1,5 @@
 #!/usr/bin/env bash -x
 
-# exit script on error
-set -e
-
 ###########################
 #create the script_path var
 ###########################
