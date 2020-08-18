@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 xcodebuild -create-xcframework \
-	-framework build/iphoneos/Agent_iOS.framework \
-	-framework build/iphonesimulator/Agent_iOS.framework \
-	-framework build/appletvsimulator/Agent_tvos.framework/ \
-	-framework build/appletvos/Agent_tvos.framework \
-	-framework build/macosx/Agent_iOS.framework 	\
-	-output build/Agent.xcframework
+	-framework build/iphoneos/NewRelic.framework \
+	-framework build/iphonesimulator/NewRelic.framework \
+	-framework build/appletvsimulator/NewRelic.framework/ \
+	-framework build/appletvos/NewRelic.framework \
+	-framework build/macosx/NewRelic.framework 	\
+	-output build/NewRelic.xcframework
