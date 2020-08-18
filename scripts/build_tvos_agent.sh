@@ -27,7 +27,7 @@ rm -rf ${BUILD_PATH}/appletvos
 /usr/bin/xcodebuild -configuration Release -scheme Agent-tvOS -sdk appletvos archive BUILD_LIBRARIES_FOR_DISTRIBUTION=YES > build.out 2>&1
 
 if [ $? -ne 0 ]; then
-  print "Xcode build failed."
+  echo "Xcode build failed."
   cat build.out
   exit 1
 fi
@@ -45,7 +45,7 @@ source ${BUILD_PATH}/archive_paths.sh
 /usr/bin/xcodebuild -configuration Release -scheme Agent-tvOS -sdk appletvsimulator build > build.out 2>&1
 
 if [ $? -ne 0 ]; then
-  print "Xcode build failed."
+  echo "Xcode build failed."
   cat build.out
   exit 1
 fi

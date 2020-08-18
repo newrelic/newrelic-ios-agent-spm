@@ -27,7 +27,7 @@ rm -rf ${BUILD_PATH}/macosx
 /usr/bin/xcodebuild -configuration Release -scheme Agent-iOS -sdk macosx archive BUILD_LIBRARIES_FOR_DISTRIBUTION=YES SUPPORTS_MACCATALYST=YES > build.out 2>&1
 
 if [[ $? != 0 ]]; then
-  print "Xcode build failed."
+  echo "Xcode build failed."
   cat build.out
   exit 1
 fi
