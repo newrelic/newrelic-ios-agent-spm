@@ -98,7 +98,6 @@
 		0209AC5424E70AF500E45C90 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
 		0209AC5524E70AF500E45C90 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		0209AC5624E70AF500E45C90 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
-		0209AC5724E70BA900E45C90 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		0209AC6224E7373200E45C90 /* NRTestHelperConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC6124E7373200E45C90 /* NRTestHelperConsumer.m */; };
 		0209AC6624E7391F00E45C90 /* NRMAWKNavigationDelegateBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC6524E7391F00E45C90 /* NRMAWKNavigationDelegateBaseTest.m */; };
 		0209AC8C24E7393300E45C90 /* NRMAInternalUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC6724E7392C00E45C90 /* NRMAInternalUtilsTests.m */; };
@@ -251,6 +250,7 @@
 		025658D824EB322F00FE3125 /* NRMAStressTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */; };
 		025658DC24EB34CF00FE3125 /* NewRelic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021A15BA24C9EEE700E8DFD5 /* NewRelic.framework */; };
 		025658DD24EB350300FE3125 /* NRAgentTestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABAC24E7042C00E45C90 /* NRAgentTestBase.m */; };
+		025658DE24ED97CE00FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
 		02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
@@ -1690,6 +1690,7 @@
 			files = (
 				0209ACBC24E7546F00E45C90 /* CoreData.framework in Frameworks */,
 				0209ACBA24E7546600E45C90 /* CoreTelephony.framework in Frameworks */,
+				025658DE24ED97CE00FE3125 /* libOCMock.a in Frameworks */,
 				0209ACB924E7546000E45C90 /* UIKit.framework in Frameworks */,
 				0209ACB724E7545A00E45C90 /* SystemConfiguration.framework in Frameworks */,
 				0209ABBD24E7054900E45C90 /* NewRelic.framework in Frameworks */,
@@ -1698,7 +1699,6 @@
 				0209AC5224E70AF500E45C90 /* Utilities.framework in Frameworks */,
 				0209AC5324E70AF500E45C90 /* Analytics.framework in Frameworks */,
 				0209AC5524E70AF500E45C90 /* Hex.framework in Frameworks */,
-				0209AC5724E70BA900E45C90 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4290,10 +4290,11 @@
 					"${PROJECT_DIR}/UnitTests/NewRelicAgentTests",
 					"${PROJECT_DIR}",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)/Tests/Shared",
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
-					UnitTests/Shared/libOCMock.a,
+					Tests/Shared/libOCMock.a,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newrelic.Agent-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4333,10 +4334,11 @@
 					"${PROJECT_DIR}/UnitTests/NewRelicAgentTests",
 					"${PROJECT_DIR}",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)/Tests/Shared",
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
-					UnitTests/Shared/libOCMock.a,
+					Tests/Shared/libOCMock.a,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newrelic.Agent-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
