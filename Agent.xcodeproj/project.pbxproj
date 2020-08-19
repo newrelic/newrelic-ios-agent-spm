@@ -3585,7 +3585,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/bash -x";
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\necho CONFIGURATION=${CONFIGURATION}\nif [ $CONFIGURATION = \"Release\" ]; then\n    rm -rf Frameworks/\n  ./release_build.sh appletvos \"${VALID_ARCHS}\"\nelse\n  ./build.sh appletvos \"${VALID_ARCHS}\" \nfi \n\nif [[ ! -z ../Frameworks ]]; then\n    mkdir ../Frameworks\nfi\n\nif [ $? -eq 0 ]; then\n  frameworks=$(ls build/appletvos | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/appletvos/$framework ../Frameworks\n  done\nfi \n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\necho CONFIGURATION=${CONFIGURATION}\nif [ $CONFIGURATION = \"Release\" ]; then\n    rm -rf ../Frameworks/\n  ./release_build.sh appletvos \"${VALID_ARCHS}\"\nelse\n  ./build.sh appletvos \"${VALID_ARCHS}\" \nfi \n\nif [[ ! -z ../Frameworks ]]; then\n    mkdir ../Frameworks\nfi\n\nif [ $? -eq 0 ]; then\n  frameworks=$(ls build/appletvos | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/appletvos/$framework ../Frameworks\n  done\nfi \n";
 		};
 		02FF4B1024DDF4BB00115469 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3603,7 +3603,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/bash -x";
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\nif [[ $CONFIGURATION = \"Release\" ]]; then\n    rm -rf Frameworks/\n  ./release_build.sh ${PLATFORM_NAME} \"${VALID_ARCHS}\"\nelse\n  ./build.sh ${PLATFORM_NAME} \"${VALID_ARCHS}\" \nfi \n\nif [[ ! -z ../Frameworks ]]; then\n    mkdir ../Frameworks\nfi\n\nif [[ $? -eq 0 ]]; then\n  frameworks=$(ls build/$PLATFORM_NAME | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/${PLATFORM_NAME}/$framework ../Frameworks\n  done\nfi \n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\nif [[ $CONFIGURATION = \"Release\" ]]; then\n    rm -rf ../Frameworks/\n  ./release_build.sh ${PLATFORM_NAME} \"${VALID_ARCHS}\"\nelse\n  ./build.sh ${PLATFORM_NAME} \"${VALID_ARCHS}\" \nfi \n\nif [[ ! -z ../Frameworks ]]; then\n    mkdir ../Frameworks\nfi\n\nif [[ $? -eq 0 ]]; then\n  frameworks=$(ls build/$PLATFORM_NAME | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/${PLATFORM_NAME}/$framework ../Frameworks\n  done\nfi \n";
 		};
 		02FF4B1524E1F04300115469 /* Capture environment variables */ = {
 			isa = PBXShellScriptBuildPhase;
