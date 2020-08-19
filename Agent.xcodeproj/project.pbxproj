@@ -233,7 +233,6 @@
 		0256585624EB19BF00FE3125 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE424DC894D00115469 /* Utilities.framework */; };
 		0256585724EB19BF00FE3125 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47D424DB53FC00115469 /* Analytics.framework */; };
 		0256585824EB19BF00FE3125 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
-		0256585924EB19BF00FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		0256585B24EB19BF00FE3125 /* testUploadFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0209ABAE24E7042C00E45C90 /* testUploadFile.txt */; };
 		0256585C24EB19BF00FE3125 /* JdAWN9v.png in Resources */ = {isa = PBXBuildFile; fileRef = 0209ACC024EB015D00E45C90 /* JdAWN9v.png */; };
 		025658AB24EB2AAC00FE3125 /* Stress_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658AA24EB2AAC00FE3125 /* Stress_Tests.m */; };
@@ -252,6 +251,8 @@
 		025658DC24EB34CF00FE3125 /* NewRelic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021A15BA24C9EEE700E8DFD5 /* NewRelic.framework */; };
 		025658DD24EB350300FE3125 /* NRAgentTestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABAC24E7042C00E45C90 /* NRAgentTestBase.m */; };
 		025658DE24ED97CE00FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
+		025658E224EDA93500FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
+		025658E324EDA93600FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
 		02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
@@ -1733,7 +1734,7 @@
 				0256585624EB19BF00FE3125 /* Utilities.framework in Frameworks */,
 				0256585724EB19BF00FE3125 /* Analytics.framework in Frameworks */,
 				0256585824EB19BF00FE3125 /* Hex.framework in Frameworks */,
-				0256585924EB19BF00FE3125 /* libOCMock.a in Frameworks */,
+				025658E224EDA93500FE3125 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1742,6 +1743,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				025658DC24EB34CF00FE3125 /* NewRelic.framework in Frameworks */,
+				025658E324EDA93600FE3125 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4638,6 +4640,7 @@
 					"${PROJECT_DIR}/UnitTests/NewRelicAgentTests",
 					"${PROJECT_DIR}",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)/Tests/Shared",
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
@@ -4682,6 +4685,7 @@
 					"${PROJECT_DIR}/UnitTests/NewRelicAgentTests",
 					"${PROJECT_DIR}",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)/Tests/Shared",
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
@@ -4718,6 +4722,7 @@
 					"${PROJECT_DIR}/Tests/Shared",
 					"${PROJECT_DIR}",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)/Tests/Shared",
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
@@ -4751,6 +4756,7 @@
 					"${PROJECT_DIR}/Tests/Shared",
 					"${PROJECT_DIR}",
 					"${SRCROOT}",
+					"$(PROJECT_DIR)/Tests/Shared",
 				);
 				OTHER_LDFLAGS = (
 					"-force_load",
