@@ -23,7 +23,6 @@
 			buildConfigurationList = 02FF4B0D24DDC68A00115469 /* Build configuration list for PBXAggregateTarget "libMobileAgent" */;
 			buildPhases = (
 				02FF4B1024DDF4BB00115469 /* Run Script */,
-				025658E124ED9C6900FE3125 /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -3446,6 +3445,7 @@
 				02FF4C9B24E3201400115469 /* Frameworks */,
 				02FF4CA624E3201400115469 /* Resources */,
 				02FF4CA724E3201400115469 /* Capture environment variables */,
+				025658E424EDAAE100FE3125 /* ShellScript */,
 			);
 			buildRules = (
 				02FF4CA824E3201400115469 /* PBXBuildRule */,
@@ -3608,7 +3608,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"Creating derivedDataDirectory file\"\necho \"${OBJECT_FILE_DIR_normal}/x86_64\" > ${PROJECT_DIR}/derivedDataDirectory\nfi\n";
 		};
-		025658E124ED9C6900FE3125 /* ShellScript */ = {
+		025658E424EDAAE100FE3125 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3623,7 +3623,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#this is used in code coverage.\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"Creating derivedDataDirectory file\"\necho \"${OBJECT_FILE_DIR_normal}/x86_64\" > ${PROJECT_DIR}/derivedDataDirectory\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"Creating derivedDataDirectory file\"\necho \"${OBJECT_FILE_DIR_normal}/x86_64\" > ${PROJECT_DIR}/derivedDataDirectory\nfi\n";
 		};
 		02FF4B1024DDF4BB00115469 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
