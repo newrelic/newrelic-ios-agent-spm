@@ -23,6 +23,7 @@
 			buildConfigurationList = 02FF4B0D24DDC68A00115469 /* Build configuration list for PBXAggregateTarget "libMobileAgent" */;
 			buildPhases = (
 				02FF4B1024DDF4BB00115469 /* Run Script */,
+				025658E124ED9C6900FE3125 /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -3384,6 +3385,7 @@
 				021A15B724C9EEE700E8DFD5 /* Frameworks */,
 				021A15B824C9EEE700E8DFD5 /* Resources */,
 				02FF4B1524E1F04300115469 /* Capture environment variables */,
+				025658E024ED9C5500FE3125 /* ShellScript */,
 			);
 			buildRules = (
 				02FF4AEE24DC8AD900115469 /* PBXBuildRule */,
@@ -3586,6 +3588,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/bash -x";
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\npushd ${PROJECT_DIR}/libMobileAgent\necho CONFIGURATION=${CONFIGURATION}\nif [ $CONFIGURATION = \"Release\" ]; then\n    rm -rf ../Frameworks/\n  ./release_build.sh appletvos \"${VALID_ARCHS}\"\nelse\n  ./build.sh appletvos \"${VALID_ARCHS}\" \nfi \n\nif [[ ! -z ../Frameworks ]]; then\n    mkdir ../Frameworks\nfi\n\nif [ $? -eq 0 ]; then\n  frameworks=$(ls build/appletvos | grep \\.framework)\n  for framework in ${frameworks} ; do\n  if [ ! -z \"${framework}\" ]; then\n    rm -rf ../Frameworks/$framework\n  fi\n    mv -f build/appletvos/$framework ../Frameworks\n  done\nfi \n";
+		};
+		025658E024ED9C5500FE3125 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"Creating derivedDataDirectory file\"\necho \"${OBJECT_FILE_DIR_normal}/x86_64\" > ${PROJECT_DIR}/derivedDataDirectory\nfi\n";
+		};
+		025658E124ED9C6900FE3125 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#this is used in code coverage.\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\necho \"Creating derivedDataDirectory file\"\necho \"${OBJECT_FILE_DIR_normal}/x86_64\" > ${PROJECT_DIR}/derivedDataDirectory\nfi\n";
 		};
 		02FF4B1024DDF4BB00115469 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
