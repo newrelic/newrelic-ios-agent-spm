@@ -2143,6 +2143,7 @@
 		0256586524EB285600FE3125 /* Stress-Tests */ = {
 			isa = PBXGroup;
 			children = (
+				025658AC24EB2AAC00FE3125 /* Info.plist */,
 				025658D624EB322F00FE3125 /* NRMAStressTestHelper.h */,
 				025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */,
 				025658C524EB2F3300FE3125 /* Measurement Engine Stress Tests */,
@@ -2157,7 +2158,6 @@
 			isa = PBXGroup;
 			children = (
 				025658AA24EB2AAC00FE3125 /* Stress_Tests.m */,
-				025658AC24EB2AAC00FE3125 /* Info.plist */,
 			);
 			path = "Stress Tests";
 			sourceTree = "<group>";
