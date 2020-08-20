@@ -4710,7 +4710,7 @@
 					"${PROJECT_DIR}/UnitTests/",
 					"${SRCROOT}/**",
 				);
-				INFOPLIST_FILE = "Stress Tests/Info.plist";
+				INFOPLIST_FILE = "Tests/Stress-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4744,7 +4744,7 @@
 					"${PROJECT_DIR}/UnitTests/",
 					"${SRCROOT}/**",
 				);
-				INFOPLIST_FILE = "Stress Tests/Info.plist";
+				INFOPLIST_FILE = "Tests/Stress-Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
