@@ -234,7 +234,6 @@
 		0256585824EB19BF00FE3125 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		0256585B24EB19BF00FE3125 /* testUploadFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0209ABAE24E7042C00E45C90 /* testUploadFile.txt */; };
 		0256585C24EB19BF00FE3125 /* JdAWN9v.png in Resources */ = {isa = PBXBuildFile; fileRef = 0209ACC024EB015D00E45C90 /* JdAWN9v.png */; };
-		025658AB24EB2AAC00FE3125 /* Stress_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658AA24EB2AAC00FE3125 /* Stress_Tests.m */; };
 		025658BC24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */; };
 		025658C024EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658BE24EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m */; };
 		025658C124EB2EE900FE3125 /* NRMAAnalyticsControllerStressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 025658BF24EB2EE900FE3125 /* NRMAAnalyticsControllerStressor.m */; };
@@ -1278,7 +1277,6 @@
 		0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agent_tvos_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0256586124EB19BF00FE3125 /* Agent_Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Agent_Tests copy-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/Agent_Tests copy-Info.plist"; sourceTree = "<absolute>"; };
 		025658A824EB2AAC00FE3125 /* Stress Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stress Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		025658AA24EB2AAC00FE3125 /* Stress_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stress_Tests.m; sourceTree = "<group>"; };
 		025658AC24EB2AAC00FE3125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NRMAHandledExcaptionStressor.mm; sourceTree = "<group>"; };
 		025658BE24EB2EE900FE3125 /* NRMAAnalyticsLifecycleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAAnalyticsLifecycleTest.m; sourceTree = "<group>"; };
@@ -2082,7 +2080,6 @@
 				02FF4AEF24DC8CB200115469 /* flatbuffers */,
 				02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */,
 				0209ABB924E7054800E45C90 /* Agent_Tests */,
-				025658A924EB2AAC00FE3125 /* Stress Tests */,
 				02FF47D724DB54E600115469 /* Frameworks */,
 				021A15BC24C9EEE700E8DFD5 /* Agent */,
 				021A15BB24C9EEE700E8DFD5 /* Products */,
@@ -2152,14 +2149,6 @@
 				025658BA24EB2E7900FE3125 /* Handled Exception Tests */,
 			);
 			path = "Stress-Tests";
-			sourceTree = "<group>";
-		};
-		025658A924EB2AAC00FE3125 /* Stress Tests */ = {
-			isa = PBXGroup;
-			children = (
-				025658AA24EB2AAC00FE3125 /* Stress_Tests.m */,
-			);
-			path = "Stress Tests";
 			sourceTree = "<group>";
 		};
 		025658BA24EB2E7900FE3125 /* Handled Exception Tests */ = {
@@ -4065,7 +4054,6 @@
 				025658DD24EB350300FE3125 /* NRAgentTestBase.m in Sources */,
 				025658D424EB2F6400FE3125 /* NRMASummaryMeasurementConsumerStressor.m in Sources */,
 				025658D824EB322F00FE3125 /* NRMAStressTestHelper.m in Sources */,
-				025658AB24EB2AAC00FE3125 /* Stress_Tests.m in Sources */,
 				025658BC24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm in Sources */,
 				025658D324EB2F6400FE3125 /* NRMAMeasurementConsumerStressor.m in Sources */,
 				025658C924EB2F4700FE3125 /* NRMAMeasurementPoolStressor.m in Sources */,
