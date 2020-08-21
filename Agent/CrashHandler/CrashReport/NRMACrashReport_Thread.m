@@ -15,7 +15,7 @@
                     threadNumber:(NSNumber*)threadNumber
                         threadId:(NSString*)threadId
                         priority:(NSNumber*)priority
-                           stack:(NSArray*)stackFrames
+                           stack:(NSMutableArray*)stackFrames
 {
     self = [super init];
     if (self) {
@@ -40,16 +40,16 @@
      @property(strong) NRMACrashReport_Stack* stack;
      */
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:[NSNumber numberWithBool:self.crashed]?:[NSNull null] forKey:kNRMA_CR_crashedKey];
-    [jsonDictionary setObject:self.registers?:[NSNull null] forKey:kNRMA_CR_registersKey];
-    [jsonDictionary setObject:self.threadNumber?:[NSNull null] forKey:kNRMA_CR_threadNumberKey];
-    [jsonDictionary setObject:self.threadId?:[NSNull null] forKey:kNRMA_CR_threadIdKey];
-    [jsonDictionary setObject:self.priority?:[NSNull null] forKey:kNRMA_CR_priorityKey];
+    jsonDictionary[kNRMA_CR_crashedKey] = @(self.crashed) ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_registersKey] = self.registers ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_threadNumberKey] = self.threadNumber ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_threadIdKey] = self.threadId ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_priorityKey] = self.priority ?: (id) [NSNull null];
     NSMutableArray* stackFramesArray = [[NSMutableArray alloc] init];
     for (NRMACrashReport_Stack* stack in self.stackFrames) {
         [stackFramesArray addObject:[stack JSONObject]?:[NSNull null]];
     }
-    [jsonDictionary setObject:stackFramesArray?:[NSNull null] forKey:kNRMA_CR_stackKey];
+    jsonDictionary[kNRMA_CR_stackKey] = stackFramesArray ?: (id) [NSNull null];
     return jsonDictionary;
 }
 

@@ -52,16 +52,16 @@
      @property(strong) NSString* modelNumber;
      */
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.memoryUsage?:[NSNull null] forKey:kNRMA_CR_memoryUsageKey];
-    [jsonDictionary setObject:self.orientation?:[NSNull null] forKey:kNRMA_CR_orientationKey];
-    [jsonDictionary setObject:self.networkStatus?:[NSNull null] forKey:kNRMA_CR_networkStatusKey];
-    [jsonDictionary setObject:self.diskUsage?:[NSNull null] forKey:kNRMA_CR_diskUsageKey];
-    [jsonDictionary setObject:self.osVersion?:[NSNull null] forKey:kNRMA_CR_osVersionKey];
-    [jsonDictionary setObject:self.deviceName?:[NSNull null] forKey:KNRMA_CR_deviceNameKey];
-    [jsonDictionary setObject:self.osBuild?:[NSNull null] forKey:kNRMA_CR_osBuildKey];
-    [jsonDictionary setObject:self.architecture?:[NSNull null] forKey:kNRMA_CR_architectureKey];
-    [jsonDictionary setObject:self.modelNumber?:[NSNull null] forKey:kNRMA_CR_modelNumberKey];
-    [jsonDictionary setObject:self.deviceUuid?:[NSNull null] forKey:kNRMA_CR_deviceUuid];
+    jsonDictionary[kNRMA_CR_memoryUsageKey] = self.memoryUsage ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_orientationKey] = self.orientation ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_networkStatusKey] = self.networkStatus ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_diskUsageKey] = self.diskUsage ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_osVersionKey] = self.osVersion ?: (id) [NSNull null];
+    jsonDictionary[KNRMA_CR_deviceNameKey] = self.deviceName ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_osBuildKey] = self.osBuild ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_architectureKey] = self.architecture ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_modelNumberKey] = self.modelNumber ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_deviceUuid] = self.deviceUuid ?: (id) [NSNull null];
     return jsonDictionary;
 }
 @end

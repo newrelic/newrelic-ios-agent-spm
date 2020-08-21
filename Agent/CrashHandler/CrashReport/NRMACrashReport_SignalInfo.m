@@ -31,9 +31,9 @@
     @property(strong) NSString* signalName;
     */
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.faultAddress?:[NSNull null] forKey:kNRMA_CR_faultAddressKey];
-    [jsonDictionary setObject:self.signalCode?:[NSNull null] forKey:kNRMA_CR_signalCodeKey];
-    [jsonDictionary setObject:self.signalName?:[NSNull null] forKey:kNRMA_CR_signalNameKey];
+    jsonDictionary[kNRMA_CR_faultAddressKey] = self.faultAddress ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_signalCodeKey] = self.signalCode ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_signalNameKey] = self.signalName ?: (id) [NSNull null];
     return jsonDictionary;
 }
 @end

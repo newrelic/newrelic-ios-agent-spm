@@ -28,8 +28,8 @@
      @property(strong) NSString* typeEncoding;
      */
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.arch?:[NSNull null] forKey:kNRMA_CR_archKey];
-    [jsonDictionary setObject:self.typeEncoding?:[NSNull null] forKey:kNRMA_CR_typeEncodingKey];
+    jsonDictionary[kNRMA_CR_archKey] = self.arch ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_typeEncodingKey] = self.typeEncoding ?: (id) [NSNull null];
     return jsonDictionary;
 }
 @end

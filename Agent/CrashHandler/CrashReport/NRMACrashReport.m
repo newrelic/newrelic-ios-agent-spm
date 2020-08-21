@@ -28,20 +28,20 @@
 {
     self = [super init];
     if (self) {
-        _uuid = uuid;
-        _buildIdentifier = buildIdentifier;
-        _timestamp = timestamp;
-        _appToken = appToken;
-        _accountId = accountId;
-        _agentId = agentId;
-        _deviceInfo = deviceInfo;
-        _appInfo = appInfo;
-        _exception = exception;
-        _threads = threads;
-        _libraries =  libraries;
-        _activityHistory = activityHistory;
-        _events = events;
-        _sessionAttributes = attributes;
+        self.uuid = uuid;
+        self.buildIdentifier = buildIdentifier;
+        self.timestamp = timestamp;
+        self.appToken = appToken;
+        self.accountId = accountId;
+        self.agentId = agentId;
+        self.deviceInfo = deviceInfo;
+        self.appInfo = appInfo;
+        self.exception = exception;
+        self.threads = threads;
+        self.libraries =  libraries;
+        self.activityHistory = activityHistory;
+        self.events = events;
+        self.sessionAttributes = attributes;
 
     }
     return self;
@@ -58,7 +58,7 @@
     jsonDictionary[kNRMA_CR_timestampKey] = self.timestamp?:[NSNull null];
     jsonDictionary[kNRMA_CR_appTokenKey] = self.appToken?:[NSNull null];
     jsonDictionary[kNRMA_CR_dataToken] = dataToken?:[NSNull null];
-    jsonDictionary[kNRMA_CR_deviceInfoKey] = [self.deviceInfo  JSONObject]?:[NSNull null];
+    jsonDictionary[kNRMA_CR_deviceInfoKey] = [self.deviceInfo JSONObject]?:[NSNull null];
     jsonDictionary[kNRMA_CR_appInfoKey] = [self.appInfo JSONObject]?:[NSNull null];
     jsonDictionary[kNRMA_CR_exceptionKey] = [self.exception JSONObject]?:[NSNull null];
 

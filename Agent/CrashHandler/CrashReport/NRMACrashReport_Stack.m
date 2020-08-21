@@ -24,8 +24,8 @@
 - (id) JSONObject
 {
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.instructionPointer?:[NSNull null] forKey:kNRMA_CR_instructionPtrKey];
-    [jsonDictionary setObject:[self.symbol JSONObject]?:[NSNull null] forKey:kNRMA_CR_symbolKey];
+    jsonDictionary[kNRMA_CR_instructionPtrKey] = self.instructionPointer ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_symbolKey] = [self.symbol JSONObject] ?: (id) [NSNull null];
     return jsonDictionary;
 }
 @end

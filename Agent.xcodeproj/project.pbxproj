@@ -32,7 +32,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0209ABBB24E7054900E45C90 /* Agent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABBA24E7054900E45C90 /* Agent_Tests.m */; };
 		0209ABBD24E7054900E45C90 /* NewRelic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021A15BA24C9EEE700E8DFD5 /* NewRelic.framework */; };
 		0209ABC324E7057900E45C90 /* NRAgentTestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABAC24E7042C00E45C90 /* NRAgentTestBase.m */; };
 		0209ABC424E7058500E45C90 /* NRMeasurementConsumerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABAD24E7042C00E45C90 /* NRMeasurementConsumerHelper.m */; };
@@ -218,7 +217,6 @@
 		0256584624EB19BF00FE3125 /* NRMeasurementConsumerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABAD24E7042C00E45C90 /* NRMeasurementConsumerHelper.m */; };
 		0256584724EB19BF00FE3125 /* NRReachabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC7324E7392E00E45C90 /* NRReachabilityTest.m */; };
 		0256584824EB19BF00FE3125 /* APIInteractionTraceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC0924E7071400E45C90 /* APIInteractionTraceTest.m */; };
-		0256584924EB19BF00FE3125 /* Agent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209ABBA24E7054900E45C90 /* Agent_Tests.m */; };
 		0256584A24EB19BF00FE3125 /* NRNSURLConnectionDelegateBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC7E24E7393100E45C90 /* NRNSURLConnectionDelegateBaseTest.m */; };
 		0256584B24EB19BF00FE3125 /* NRMethodProfilerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC7624E7392E00E45C90 /* NRMethodProfilerTests.m */; };
 		0256584C24EB19BF00FE3125 /* MachineMeasurementsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC1324E7071D00E45C90 /* MachineMeasurementsTest.m */; };
@@ -254,10 +252,6 @@
 		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
 		02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
-		02FF47D024DB53F500115469 /* json.hh in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47C924DB53F500115469 /* json.hh */; };
-		02FF47D124DB53F500115469 /* json.tab.hh in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47CA24DB53F500115469 /* json.tab.hh */; };
-		02FF47D224DB53F500115469 /* json_st.hh in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47CB24DB53F500115469 /* json_st.hh */; };
-		02FF47D324DB53F500115469 /* IJsonable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47CC24DB53F500115469 /* IJsonable.hpp */; };
 		02FF47D524DB53FC00115469 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47D424DB53FC00115469 /* Analytics.framework */; };
 		02FF47D924DB563600115469 /* NewRelic.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FF47D824DB563600115469 /* NewRelic.m */; };
 		02FF47E824DB567600115469 /* NRLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47DD24DB567600115469 /* NRLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -739,7 +733,6 @@
 		02FF4B7F24E3201400115469 /* NRMAAnalytics+cppInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF485424DC615900115469 /* NRMAAnalytics+cppInterface.h */; };
 		02FF4B8024E3201400115469 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AF924DC8CB200115469 /* hash.h */; };
 		02FF4B8124E3201400115469 /* NRMAMachineMeasurementConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4A1024DC648500115469 /* NRMAMachineMeasurementConsumer.h */; };
-		02FF4B8224E3201400115469 /* IJsonable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47CC24DB53F500115469 /* IJsonable.hpp */; };
 		02FF4B8324E3201400115469 /* NRMAMeasurementConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4A0F24DC648500115469 /* NRMAMeasurementConsumer.h */; };
 		02FF4B8424E3201400115469 /* NRMAHandledExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF492824DC625A00115469 /* NRMAHandledExceptions.h */; };
 		02FF4B8524E3201400115469 /* NewRelicFeatureFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47DE24DB567600115469 /* NewRelicFeatureFlags.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -753,7 +746,6 @@
 		02FF4B8D24E3201400115469 /* NRMAMeasurementProducer.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4A6124DC64E600115469 /* NRMAMeasurementProducer.h */; };
 		02FF4B8E24E3201400115469 /* NRMAExceptionReportAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF492924DC625A00115469 /* NRMAExceptionReportAdaptor.h */; };
 		02FF4B8F24E3201400115469 /* NRMAHarvestableTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF498624DC62B500115469 /* NRMAHarvestableTrace.h */; };
-		02FF4B9024E3201400115469 /* json_st.hh in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47CB24DB53F500115469 /* json_st.hh */; };
 		02FF4B9124E3201400115469 /* NRMAScopedMeasurement.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF499E24DC62B800115469 /* NRMAScopedMeasurement.h */; };
 		02FF4B9224E3201400115469 /* NRMAJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4A8A24DC652D00115469 /* NRMAJSON.h */; };
 		02FF4B9324E3201400115469 /* NRMALastActivityTraceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF483324DC614100115469 /* NRMALastActivityTraceController.h */; };
@@ -792,7 +784,6 @@
 		02FF4BB424E3201400115469 /* NRMAHTTPUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4ACA24DC657B00115469 /* NRMAHTTPUtilities.h */; };
 		02FF4BB524E3201400115469 /* NRMAHTTPUtilities+cppInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AC924DC657B00115469 /* NRMAHTTPUtilities+cppInterface.h */; };
 		02FF4BB624E3201400115469 /* flatbuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AF424DC8CB200115469 /* flatbuffers.h */; };
-		02FF4BB724E3201400115469 /* json.hh in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47C924DB53F500115469 /* json.hh */; };
 		02FF4BB824E3201400115469 /* NRMANetworkFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4ACB24DC657B00115469 /* NRMANetworkFacade.h */; };
 		02FF4BB924E3201400115469 /* NRMAScopedMeasurements.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF497924DC62B400115469 /* NRMAScopedMeasurements.h */; };
 		02FF4BBA24E3201400115469 /* NRMACrashReport_SignalInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF490124DC624300115469 /* NRMACrashReport_SignalInfo.h */; };
@@ -813,7 +804,6 @@
 		02FF4BC924E3201400115469 /* NRMAPayloadContainer+cppInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4ABF24DC656800115469 /* NRMAPayloadContainer+cppInterface.h */; };
 		02FF4BCA24E3201400115469 /* NRMAHarvester.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF494924DC626E00115469 /* NRMAHarvester.h */; };
 		02FF4BCB24E3201400115469 /* NRMAHTTPErrorMeasurementProducer.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4A5E24DC64E600115469 /* NRMAHTTPErrorMeasurementProducer.h */; };
-		02FF4BCC24E3201400115469 /* json.tab.hh in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47CA24DB53F500115469 /* json.tab.hh */; };
 		02FF4BCD24E3201400115469 /* NRMAHarvestAware.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF494524DC626E00115469 /* NRMAHarvestAware.h */; };
 		02FF4BCE24E3201400115469 /* registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4AF324DC8CB200115469 /* registry.h */; };
 		02FF4BCF24E3201400115469 /* NRMAExceptionHandlerJSONKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF48D424DC622600115469 /* NRMAExceptionHandlerJSONKeys.h */; };
@@ -1140,8 +1130,6 @@
 		0209ABB224E7049F00E45C90 /* RootTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTests.h; sourceTree = "<group>"; };
 		0209ABB324E704A600E45C90 /* NRMAWKWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMAWKWebViewTests.m; sourceTree = "<group>"; };
 		0209ABB824E7054800E45C90 /* Agent_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agent_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0209ABBA24E7054900E45C90 /* Agent_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Agent_Tests.m; sourceTree = "<group>"; };
-		0209ABBC24E7054900E45C90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0209ABD124E706AD00E45C90 /* TestHexUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHexUploader.m; sourceTree = "<group>"; };
 		0209ABD224E706AD00E45C90 /* TestRetryTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRetryTracker.m; sourceTree = "<group>"; };
 		0209ABD324E706AD00E45C90 /* TestHandledExceptionController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestHandledExceptionController.mm; sourceTree = "<group>"; };
@@ -1275,7 +1263,7 @@
 		021A15BD24C9EEE700E8DFD5 /* Agent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
 		021A15BE24C9EEE700E8DFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agent_tvos_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0256586124EB19BF00FE3125 /* Agent_Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Agent_Tests copy-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/Agent_Tests copy-Info.plist"; sourceTree = "<absolute>"; };
+		0256586124EB19BF00FE3125 /* tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tests-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/tests-Info.plist"; sourceTree = "<absolute>"; };
 		025658A824EB2AAC00FE3125 /* Stress Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stress Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		025658AC24EB2AAC00FE3125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NRMAHandledExcaptionStressor.mm; sourceTree = "<group>"; };
@@ -1294,10 +1282,6 @@
 		02FF47C524DB53F400115469 /* json.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = json.framework; sourceTree = "<group>"; };
 		02FF47C624DB53F500115469 /* Hex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hex.framework; sourceTree = "<group>"; };
 		02FF47C724DB53F500115469 /* Connectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Connectivity.framework; sourceTree = "<group>"; };
-		02FF47C924DB53F500115469 /* json.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hh; sourceTree = "<group>"; };
-		02FF47CA24DB53F500115469 /* json.tab.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.tab.hh; sourceTree = "<group>"; };
-		02FF47CB24DB53F500115469 /* json_st.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json_st.hh; sourceTree = "<group>"; };
-		02FF47CC24DB53F500115469 /* IJsonable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IJsonable.hpp; sourceTree = "<group>"; };
 		02FF47D424DB53FC00115469 /* Analytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Analytics.framework; sourceTree = "<group>"; };
 		02FF47D824DB563600115469 /* NewRelic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRelic.m; sourceTree = "<group>"; };
 		02FF47DD24DB567600115469 /* NRLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRLogger.h; sourceTree = "<group>"; };
@@ -1679,7 +1663,7 @@
 		02FF4AFA24DC8CB200115469 /* reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reflection.h; sourceTree = "<group>"; };
 		02FF4AFB24DC8CB200115469 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
 		02FF4CAC24E3201400115469 /* NewRelic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewRelic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		02FF4CAD24E3201600115469 /* Agent copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Agent copy-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/Agent copy-Info.plist"; sourceTree = "<absolute>"; };
+		02FF4CAD24E3201600115469 /* tvos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tvos-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/tvos-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1776,6 +1760,7 @@
 		0209ABA624E7040900E45C90 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0256586124EB19BF00FE3125 /* tests-Info.plist */,
 				0209ACC024EB015D00E45C90 /* JdAWN9v.png */,
 				0209AC6324E738D400E45C90 /* NRTestConstants.h */,
 				0209AC6024E7373100E45C90 /* NRTestHelperConsumer.h */,
@@ -1817,15 +1802,6 @@
 				0209ABC624E7059900E45C90 /* User-Action-Tests */,
 			);
 			path = NewRelicAgentTests;
-			sourceTree = "<group>";
-		};
-		0209ABB924E7054800E45C90 /* Agent_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0209ABBA24E7054900E45C90 /* Agent_Tests.m */,
-				0209ABBC24E7054900E45C90 /* Info.plist */,
-			);
-			path = Agent_Tests;
 			sourceTree = "<group>";
 		};
 		0209ABC624E7059900E45C90 /* User-Action-Tests */ = {
@@ -2079,13 +2055,10 @@
 				0256586424EB284600FE3125 /* Tests */,
 				02FF4AEF24DC8CB200115469 /* flatbuffers */,
 				02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */,
-				0209ABB924E7054800E45C90 /* Agent_Tests */,
 				02FF47D724DB54E600115469 /* Frameworks */,
 				021A15BC24C9EEE700E8DFD5 /* Agent */,
 				021A15BB24C9EEE700E8DFD5 /* Products */,
 				59AA4A3EC874908AEE69ECB0 /* scripts */,
-				02FF4CAD24E3201600115469 /* Agent copy-Info.plist */,
-				0256586124EB19BF00FE3125 /* Agent_Tests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2104,6 +2077,7 @@
 		021A15BC24C9EEE700E8DFD5 /* Agent */ = {
 			isa = PBXGroup;
 			children = (
+				02FF4CAD24E3201600115469 /* tvos-Info.plist */,
 				02FF4AC824DC657100115469 /* Network */,
 				02FF4ABD24DC655900115469 /* Connectivity */,
 				02FF4AB824DC654500115469 /* Vendor */,
@@ -2217,17 +2191,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		02FF47C824DB53F500115469 /* json_headers */ = {
-			isa = PBXGroup;
-			children = (
-				02FF47C924DB53F500115469 /* json.hh */,
-				02FF47CA24DB53F500115469 /* json.tab.hh */,
-				02FF47CB24DB53F500115469 /* json_st.hh */,
-				02FF47CC24DB53F500115469 /* IJsonable.hpp */,
-			);
-			path = json_headers;
-			sourceTree = "<group>";
-		};
 		02FF47D724DB54E600115469 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2241,7 +2204,6 @@
 				02FF47D424DB53FC00115469 /* Analytics.framework */,
 				02FF47C724DB53F500115469 /* Connectivity.framework */,
 				02FF47C624DB53F500115469 /* Hex.framework */,
-				02FF47C824DB53F500115469 /* json_headers */,
 				02FF47C524DB53F400115469 /* json.framework */,
 			);
 			path = Frameworks;
@@ -3021,7 +2983,6 @@
 				02FF485F24DC615A00115469 /* NRMAAnalytics+cppInterface.h in Headers */,
 				02FF4B0524DC8CB200115469 /* hash.h in Headers */,
 				02FF4A1F24DC648600115469 /* NRMAMachineMeasurementConsumer.h in Headers */,
-				02FF47D324DB53F500115469 /* IJsonable.hpp in Headers */,
 				02FF4A1E24DC648600115469 /* NRMAMeasurementConsumer.h in Headers */,
 				02FF493624DC625A00115469 /* NRMAHandledExceptions.h in Headers */,
 				02FF47E924DB567600115469 /* NewRelicFeatureFlags.h in Headers */,
@@ -3035,7 +2996,6 @@
 				02FF4A6E24DC64E600115469 /* NRMAMeasurementProducer.h in Headers */,
 				02FF493724DC625A00115469 /* NRMAExceptionReportAdaptor.h in Headers */,
 				02FF49B424DC62B800115469 /* NRMAHarvestableTrace.h in Headers */,
-				02FF47D224DB53F500115469 /* json_st.hh in Headers */,
 				02FF49CC24DC62B800115469 /* NRMAScopedMeasurement.h in Headers */,
 				02FF4AA524DC652E00115469 /* NRMAJSON.h in Headers */,
 				02FF484524DC614200115469 /* NRMALastActivityTraceController.h in Headers */,
@@ -3074,7 +3034,6 @@
 				02FF4ACF24DC657B00115469 /* NRMAHTTPUtilities.h in Headers */,
 				02FF4ACE24DC657B00115469 /* NRMAHTTPUtilities+cppInterface.h in Headers */,
 				02FF4B0024DC8CB200115469 /* flatbuffers.h in Headers */,
-				02FF47D024DB53F500115469 /* json.hh in Headers */,
 				02FF4AD024DC657B00115469 /* NRMANetworkFacade.h in Headers */,
 				02FF49A724DC62B800115469 /* NRMAScopedMeasurements.h in Headers */,
 				02FF491524DC624400115469 /* NRMACrashReport_SignalInfo.h in Headers */,
@@ -3095,7 +3054,6 @@
 				02FF4AC424DC656900115469 /* NRMAPayloadContainer+cppInterface.h in Headers */,
 				02FF495424DC626E00115469 /* NRMAHarvester.h in Headers */,
 				02FF4A6B24DC64E600115469 /* NRMAHTTPErrorMeasurementProducer.h in Headers */,
-				02FF47D124DB53F500115469 /* json.tab.hh in Headers */,
 				02FF495024DC626E00115469 /* NRMAHarvestAware.h in Headers */,
 				02FF4AFF24DC8CB200115469 /* registry.h in Headers */,
 				02FF48E824DC622700115469 /* NRMAExceptionHandlerJSONKeys.h in Headers */,
@@ -3235,7 +3193,6 @@
 				02FF4B7F24E3201400115469 /* NRMAAnalytics+cppInterface.h in Headers */,
 				02FF4B8024E3201400115469 /* hash.h in Headers */,
 				02FF4B8124E3201400115469 /* NRMAMachineMeasurementConsumer.h in Headers */,
-				02FF4B8224E3201400115469 /* IJsonable.hpp in Headers */,
 				02FF4B8324E3201400115469 /* NRMAMeasurementConsumer.h in Headers */,
 				02FF4B8424E3201400115469 /* NRMAHandledExceptions.h in Headers */,
 				02FF4B8524E3201400115469 /* NewRelicFeatureFlags.h in Headers */,
@@ -3249,7 +3206,6 @@
 				02FF4B8D24E3201400115469 /* NRMAMeasurementProducer.h in Headers */,
 				02FF4B8E24E3201400115469 /* NRMAExceptionReportAdaptor.h in Headers */,
 				02FF4B8F24E3201400115469 /* NRMAHarvestableTrace.h in Headers */,
-				02FF4B9024E3201400115469 /* json_st.hh in Headers */,
 				02FF4B9124E3201400115469 /* NRMAScopedMeasurement.h in Headers */,
 				02FF4B9224E3201400115469 /* NRMAJSON.h in Headers */,
 				02FF4B9324E3201400115469 /* NRMALastActivityTraceController.h in Headers */,
@@ -3288,7 +3244,6 @@
 				02FF4BB424E3201400115469 /* NRMAHTTPUtilities.h in Headers */,
 				02FF4BB524E3201400115469 /* NRMAHTTPUtilities+cppInterface.h in Headers */,
 				02FF4BB624E3201400115469 /* flatbuffers.h in Headers */,
-				02FF4BB724E3201400115469 /* json.hh in Headers */,
 				02FF4BB824E3201400115469 /* NRMANetworkFacade.h in Headers */,
 				02FF4BB924E3201400115469 /* NRMAScopedMeasurements.h in Headers */,
 				02FF4BBA24E3201400115469 /* NRMACrashReport_SignalInfo.h in Headers */,
@@ -3309,7 +3264,6 @@
 				02FF4BC924E3201400115469 /* NRMAPayloadContainer+cppInterface.h in Headers */,
 				02FF4BCA24E3201400115469 /* NRMAHarvester.h in Headers */,
 				02FF4BCB24E3201400115469 /* NRMAHTTPErrorMeasurementProducer.h in Headers */,
-				02FF4BCC24E3201400115469 /* json.tab.hh in Headers */,
 				02FF4BCD24E3201400115469 /* NRMAHarvestAware.h in Headers */,
 				02FF4BCE24E3201400115469 /* registry.h in Headers */,
 				02FF4BCF24E3201400115469 /* NRMAExceptionHandlerJSONKeys.h in Headers */,
@@ -3759,7 +3713,6 @@
 				0209ABC424E7058500E45C90 /* NRMeasurementConsumerHelper.m in Sources */,
 				0209AC9324E7393300E45C90 /* NRReachabilityTest.m in Sources */,
 				0209AC1124E7071500E45C90 /* APIInteractionTraceTest.m in Sources */,
-				0209ABBB24E7054900E45C90 /* Agent_Tests.m in Sources */,
 				0209AC9824E7393300E45C90 /* NRNSURLConnectionDelegateBaseTest.m in Sources */,
 				0209AC9424E7393300E45C90 /* NRMethodProfilerTests.m in Sources */,
 				0209AC2124E7071F00E45C90 /* MachineMeasurementsTest.m in Sources */,
@@ -4033,7 +3986,6 @@
 				0256584624EB19BF00FE3125 /* NRMeasurementConsumerHelper.m in Sources */,
 				0256584724EB19BF00FE3125 /* NRReachabilityTest.m in Sources */,
 				0256584824EB19BF00FE3125 /* APIInteractionTraceTest.m in Sources */,
-				0256584924EB19BF00FE3125 /* Agent_Tests.m in Sources */,
 				0256584A24EB19BF00FE3125 /* NRNSURLConnectionDelegateBaseTest.m in Sources */,
 				0256584B24EB19BF00FE3125 /* NRMethodProfilerTests.m in Sources */,
 				0256584C24EB19BF00FE3125 /* MachineMeasurementsTest.m in Sources */,
@@ -4303,7 +4255,7 @@
 					"${PROJECT_DIR}/UnitTests/",
 					"${SRCROOT}/**",
 				);
-				INFOPLIST_FILE = Agent_Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Unit-Tests/Shared/tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4347,7 +4299,7 @@
 					"${PROJECT_DIR}/UnitTests/",
 					"${SRCROOT}/**",
 				);
-				INFOPLIST_FILE = Agent_Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Unit-Tests/Shared/tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4615,7 +4567,7 @@
 					"${PROJECT_DIR}/UnitTests/",
 					"${SRCROOT}/**",
 				);
-				INFOPLIST_FILE = "Agent_Tests copy-Info.plist";
+				INFOPLIST_FILE = "Tests/Unit-Tests/Shared/tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4660,7 +4612,7 @@
 					"${PROJECT_DIR}/UnitTests/",
 					"${SRCROOT}/**",
 				);
-				INFOPLIST_FILE = "Agent_Tests copy-Info.plist";
+				INFOPLIST_FILE = "Tests/Unit-Tests/Shared/tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4799,7 +4751,7 @@
 					"$(SRCROOT)/modular-crash-reporter-ios/Source/**",
 					"$(SRCROOT)",
 				);
-				INFOPLIST_FILE = "Agent copy-Info.plist";
+				INFOPLIST_FILE = "Agent/tvos-info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4839,7 +4791,7 @@
 					.,
 					"$(SRCROOT)/modular-crash-reporter-ios/Source/**",
 				);
-				INFOPLIST_FILE = "Agent copy-Info.plist";
+				INFOPLIST_FILE = "Agent/tvos-info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

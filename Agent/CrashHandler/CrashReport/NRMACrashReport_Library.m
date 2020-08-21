@@ -35,11 +35,11 @@
      @property(strong) NRMACrashReport_CodeType* codeType;
      */
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.baseAddress?:[NSNull null] forKey:kNRMA_CR_baseAddressKey];
-    [jsonDictionary setObject:self.imageName?:[NSNull null] forKey:kNRMA_CR_imageNameKey];
-    [jsonDictionary setObject:self.imageSize?:[NSNull null] forKey:kNRMA_CR_imageSizeKey];
-    [jsonDictionary setObject:self.imageUuid?:[NSNull null] forKey:kNRMA_CR_imageUuidKey];
-    [jsonDictionary setObject:[self.codeType JSONObject]?:[NSNull null] forKey:kNRMA_CR_codeTypeKey];
+    jsonDictionary[kNRMA_CR_baseAddressKey] = self.baseAddress ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_imageNameKey] = self.imageName ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_imageSizeKey] = self.imageSize ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_imageUuidKey] = (id) self.imageUuid ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_codeTypeKey] = [self.codeType JSONObject] ?: (id) [NSNull null];
     return jsonDictionary;
 }
 @end

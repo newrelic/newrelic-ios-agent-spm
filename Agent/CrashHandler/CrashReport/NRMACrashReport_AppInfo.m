@@ -47,16 +47,15 @@
      @property(strong) NSNumber* parentProcessId;
      */
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.appName?:[NSNull null] forKey:kNRMA_CR_appNameKey];
-    [jsonDictionary setObject:self.appVersion?:[NSNull null] forKey:kNRMA_CR_appVersionKey];
-    [jsonDictionary setObject:self.appBuild?:[NSNull null]
-                       forKey:kNRMA_CR_appBuildKey];
-    [jsonDictionary setObject:self.bundleId?:[NSNull null] forKey:kNRMA_CR_bundleIdKey];
-    [jsonDictionary setObject:self.processPath?:[NSNull null] forKey:kNRMA_CR_processPath];
-    [jsonDictionary setObject:self.processName?:[NSNull null] forKey:kNRMA_CR_processName];
-    [jsonDictionary setObject:self.processId?:[NSNull null] forKey:kNRMA_CR_processId];
-    [jsonDictionary setObject:self.parentProcess?:[NSNull null] forKey:kNRMA_CR_parentProcess];
-    [jsonDictionary setObject:self.parentProcessId?:[NSNull null] forKey:kNRMA_CR_parentProcessId];
+    jsonDictionary[kNRMA_CR_appNameKey] = self.appName ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_appVersionKey] = self.appVersion ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_appBuildKey] = self.appBuild ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_bundleIdKey] = self.bundleId ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_processPath] = self.processPath ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_processName] = self.processName ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_processId] = self.processId ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_parentProcess] = self.parentProcess ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_parentProcessId] = self.parentProcessId ?: (id) [NSNull null];
     return jsonDictionary;
 }
 @end

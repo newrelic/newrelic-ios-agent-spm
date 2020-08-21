@@ -27,8 +27,8 @@
      @property(strong) NSString* symbolName;
      */
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.symbolStartAddr?:[NSNull null] forKey:kNRMA_CR_symbolStartAddrKey];
-    [jsonDictionary setObject:self.symbolName?:[NSNull null] forKey:kNRMA_CR_symbolNameKey];
+    jsonDictionary[kNRMA_CR_symbolStartAddrKey] = self.symbolStartAddr ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_symbolNameKey] = self.symbolName ?: (id) [NSNull null];
     return jsonDictionary;
 }
 

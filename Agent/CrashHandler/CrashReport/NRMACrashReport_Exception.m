@@ -28,9 +28,9 @@
 //    @property(strong) NSString* cause;
 //    @property(strong) NRMACrashReport_SignalInfo* signalInfo;
     NSMutableDictionary* jsonDictionary = [[NSMutableDictionary alloc] init];
-    [jsonDictionary setObject:self.name?:[NSNull null] forKey:kNRMA_CR_nameKey];
-    [jsonDictionary setObject:self.cause?:[NSNull null] forKey:kNRMA_CR_causeKey];
-    [jsonDictionary setObject:[self.signalInfo JSONObject]?:[NSNull null] forKey:kNRMA_CR_signalInfoKey];
+    jsonDictionary[kNRMA_CR_nameKey] = self.name ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_causeKey] = self.cause ?: (id) [NSNull null];
+    jsonDictionary[kNRMA_CR_signalInfoKey] = [self.signalInfo JSONObject] ?: (id) [NSNull null];
     return jsonDictionary;
 }
 
