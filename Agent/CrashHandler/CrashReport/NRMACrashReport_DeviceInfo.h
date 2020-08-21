@@ -44,6 +44,6 @@
                          modelNumber:(NSString*)modelNumber
                           deviceUuid:(NSString*)deviceUuid;
 
- - (id) jsonObject;
+- (id) JSONObject;
 @end
 

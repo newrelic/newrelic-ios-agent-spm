@@ -75,6 +75,7 @@
 
 -(void) dealloc {
     delete wrappedNetworkResponseData;
+    [super dealloc];
 }
 
 @end
