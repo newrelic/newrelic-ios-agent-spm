@@ -249,6 +249,8 @@
 		025658DE24ED97CE00FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		025658E224EDA93500FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		025658E324EDA93600FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
+		02AD76E224F06DB300D0671F /* tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02AD76E124F06DB300D0671F /* tests-Info.plist */; };
+		02AD76E324F06DB300D0671F /* tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02AD76E124F06DB300D0671F /* tests-Info.plist */; };
 		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
 		02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
@@ -1263,7 +1265,6 @@
 		021A15BD24C9EEE700E8DFD5 /* Agent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
 		021A15BE24C9EEE700E8DFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agent_tvos_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0256586124EB19BF00FE3125 /* tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tests-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/tests-Info.plist"; sourceTree = "<absolute>"; };
 		025658A824EB2AAC00FE3125 /* Stress Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stress Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		025658AC24EB2AAC00FE3125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NRMAHandledExcaptionStressor.mm; sourceTree = "<group>"; };
@@ -1279,6 +1280,7 @@
 		025658D224EB2F6400FE3125 /* NRMAActivityTraceMeasurementCreatorStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAActivityTraceMeasurementCreatorStressor.m; sourceTree = "<group>"; };
 		025658D624EB322F00FE3125 /* NRMAStressTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRMAStressTestHelper.h; sourceTree = "<group>"; };
 		025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAStressTestHelper.m; sourceTree = "<group>"; };
+		02AD76E124F06DB300D0671F /* tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
 		02FF47C524DB53F400115469 /* json.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = json.framework; sourceTree = "<group>"; };
 		02FF47C624DB53F500115469 /* Hex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hex.framework; sourceTree = "<group>"; };
 		02FF47C724DB53F500115469 /* Connectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Connectivity.framework; sourceTree = "<group>"; };
@@ -1760,7 +1762,7 @@
 		0209ABA624E7040900E45C90 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0256586124EB19BF00FE3125 /* tests-Info.plist */,
+				02AD76E124F06DB300D0671F /* tests-Info.plist */,
 				0209ACC024EB015D00E45C90 /* JdAWN9v.png */,
 				0209AC6324E738D400E45C90 /* NRTestConstants.h */,
 				0209AC6024E7373100E45C90 /* NRTestHelperConsumer.h */,
@@ -3480,6 +3482,7 @@
 			files = (
 				0209ABC524E7058F00E45C90 /* testUploadFile.txt in Resources */,
 				0209ACC124EB015E00E45C90 /* JdAWN9v.png in Resources */,
+				02AD76E224F06DB300D0671F /* tests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3496,6 +3499,7 @@
 			files = (
 				0256585B24EB19BF00FE3125 /* testUploadFile.txt in Resources */,
 				0256585C24EB19BF00FE3125 /* JdAWN9v.png in Resources */,
+				02AD76E324F06DB300D0671F /* tests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
