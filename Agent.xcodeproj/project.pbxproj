@@ -1666,6 +1666,7 @@
 		02FF4AFB24DC8CB200115469 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
 		02FF4CAC24E3201400115469 /* NewRelic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewRelic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FF4CAD24E3201600115469 /* tvos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "tvos-Info.plist"; path = "/Users/bryce/repo/newrelic/mobile/agent/Agent/tvos-Info.plist"; sourceTree = "<absolute>"; };
+		59AA4543706D6BB36459A6C5 /* NewRelicAgent.podspec.template */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = NewRelicAgent.podspec.template; path = cocoapods/NewRelicAgent.podspec.template; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2061,6 +2062,7 @@
 				021A15BC24C9EEE700E8DFD5 /* Agent */,
 				021A15BB24C9EEE700E8DFD5 /* Products */,
 				59AA4A3EC874908AEE69ECB0 /* scripts */,
+				59AA4543706D6BB36459A6C5 /* NewRelicAgent.podspec.template */,
 			);
 			sourceTree = "<group>";
 		};
