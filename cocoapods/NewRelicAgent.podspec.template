@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
   s.license             = { :type => "Commercial", :file => "NewRelicAgent/LICENSE" }
   s.platform            = :ios, "8.0"
   s.author              = { "New Relic, Inc." => "support@newrelic.com" }
-  s.source              = { :http => "https://download.newrelic.com/ios_agent/NewRelic_XCFramework.XX.zip" }
+  s.source              = { :http => "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_X.XX.zip" }
   s.vendored_frameworks = "NewRelicAgent/NewRelic.xcframework"
-  s.preserve_paths      = "NewRelicAgent/*.xcframework
+  s.preserve_paths      = "NewRelicAgent/*.xcframework"
   s.frameworks          = "SystemConfiguration"
-  s.ios.frameworks		= "CoreTelephony"
+  s.ios.frameworks      = "CoreTelephony"
   s.libraries           = "z","c++"
   s.requires_arc        = false
 end
