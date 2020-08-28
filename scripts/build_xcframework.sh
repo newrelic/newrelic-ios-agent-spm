@@ -6,3 +6,6 @@ xcodebuild -create-xcframework \
 	-framework build/appletvos/NewRelic.framework \
 	-framework build/macosx/NewRelic.framework 	\
 	-output build/NewRelic.xcframework
+
+
+cp -r dsym-upload-tools/ build/NewRelic.xcframework/Resources/
