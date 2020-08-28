@@ -1,16 +1,18 @@
 
 Pod::Spec.new do |s|
-  s.name                = "NewRelicAgent"
-  s.version             = "X.XX"
-  s.summary             = "Real-time performance data with your next iOS app release."
-  s.homepage            = "http://newrelic.com/mobile-monitoring"
-  s.license             = { :type => "Commercial", :file => "NewRelicAgent/LICENSE" }
-  s.author              = { "New Relic, Inc." => "support@newrelic.com" }
-  s.source              = { :http => "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_X.XX.zip" }
-  s.vendored_frameworks = "NewRelicAgent/NewRelic.xcframework"
-  s.preserve_paths      = "NewRelicAgent/*.xcframework"
-  s.frameworks          = "SystemConfiguration"
-  s.ios.frameworks      = "CoreTelephony"
-  s.libraries           = "z","c++"
-  s.requires_arc        = false
+  s.name                   = "NewRelicAgent"
+  s.version                = "X.XX"
+  s.summary                = "Real-time performance data with your next iOS app release."
+  s.homepage               = "http://newrelic.com/mobile-monitoring"
+  s.license                = { :type => "Commercial", :file => "NewRelicAgent/LICENSE" }
+  s.author                 = { "New Relic, Inc." => "support@newrelic.com" }
+  s.source                 = { :http => "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_X.XX.zip" }
+  s.ios.deployment_target  = '8.0'
+  s.tvos.deployment_target = '9.0'
+  s.vendored_frameworks    = "NewRelicAgent/NewRelic.xcframework"
+  s.preserve_paths         = "NewRelicAgent/*.xcframework"
+  s.frameworks             = "SystemConfiguration"
+  s.ios.frameworks         = "CoreTelephony"
+  s.libraries              = "z","c++"
+  s.requires_arc           = false
 end
