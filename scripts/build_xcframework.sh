@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 xcodebuild -create-xcframework \
 	-framework build/iphoneos/NewRelic.framework \
 	-framework build/iphonesimulator/NewRelic.framework \
