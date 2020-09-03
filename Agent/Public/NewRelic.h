@@ -135,6 +135,9 @@ extern "C" {
  */
 + (void)startWithApplicationToken:(NSString*_Nonnull)appToken;
 
++ (void)startWithApplicationToken:(NSString*_Nonnull)appToken
+			  andCollectorAddress:(NSString*_Nonnull)url
+		 andCrashCollectorAddress:(NSString*_Nonnull)crashCollectorUrl;
 
 /*!
 
