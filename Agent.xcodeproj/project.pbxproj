@@ -1262,6 +1262,7 @@
 		021A15BA24C9EEE700E8DFD5 /* NewRelic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewRelic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		021A15BD24C9EEE700E8DFD5 /* Agent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
 		021A15BE24C9EEE700E8DFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		022A81C925030071003748E6 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agent_tvos_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		025658A824EB2AAC00FE3125 /* Stress Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stress Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		025658AC24EB2AAC00FE3125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2053,6 +2054,7 @@
 		021A15B024C9EEE700E8DFD5 = {
 			isa = PBXGroup;
 			children = (
+				022A81C925030071003748E6 /* module.modulemap */,
 				0256586424EB284600FE3125 /* Tests */,
 				02FF4AEF24DC8CB200115469 /* flatbuffers */,
 				02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */,
@@ -4389,6 +4391,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MODULEMAP_FILE = module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -4445,6 +4448,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MODULEMAP_FILE = module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
