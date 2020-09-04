@@ -249,8 +249,6 @@
 		025658DE24ED97CE00FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		025658E224EDA93500FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		025658E324EDA93600FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
-		02AD76E224F06DB300D0671F /* tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02AD76E124F06DB300D0671F /* tests-Info.plist */; };
-		02AD76E324F06DB300D0671F /* tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02AD76E124F06DB300D0671F /* tests-Info.plist */; };
 		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
 		02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
@@ -2081,6 +2079,7 @@
 		021A15BC24C9EEE700E8DFD5 /* Agent */ = {
 			isa = PBXGroup;
 			children = (
+				022A81C62502F22F003748E6 /* General */,
 				02FF4CAD24E3201600115469 /* tvos-Info.plist */,
 				02FF4AC824DC657100115469 /* Network */,
 				02FF4ABD24DC655900115469 /* Connectivity */,
@@ -2103,6 +2102,15 @@
 				021A15BE24C9EEE700E8DFD5 /* Info.plist */,
 			);
 			path = Agent;
+			sourceTree = "<group>";
+		};
+		022A81C62502F22F003748E6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				02FF47F324DB56B000115469 /* NewRelicAgentInternal.h */,
+				02FF47F524DB56B000115469 /* NewRelicAgentInternal.m */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		0256586424EB284600FE3125 /* Tests */ = {
@@ -2220,8 +2228,6 @@
 				02FF47FF24DB56B800115469 /* NRMAExceptionHandlerStartupManager.h */,
 				02FF480024DB56B800115469 /* NRMAExceptionHandlerStartupManager.m */,
 				02FF47F824DB56B000115469 /* NewRelicAgent.m */,
-				02FF47F324DB56B000115469 /* NewRelicAgentInternal.h */,
-				02FF47F524DB56B000115469 /* NewRelicAgentInternal.m */,
 				02FF47F424DB56B000115469 /* NRMAAgentVersion.h */,
 				02FF47F624DB56B000115469 /* NRMATaskQueue.h */,
 				02FF47F724DB56B000115469 /* NRMATaskQueue.m */,
@@ -3412,7 +3418,7 @@
 		021A15B124C9EEE700E8DFD5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "New Relic";
 				TargetAttributes = {
 					0209ABB724E7054800E45C90 = {
@@ -3484,7 +3490,6 @@
 			files = (
 				0209ABC524E7058F00E45C90 /* testUploadFile.txt in Resources */,
 				0209ACC124EB015E00E45C90 /* JdAWN9v.png in Resources */,
-				02AD76E224F06DB300D0671F /* tests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3501,7 +3506,6 @@
 			files = (
 				0256585B24EB19BF00FE3125 /* testUploadFile.txt in Resources */,
 				0256585C24EB19BF00FE3125 /* JdAWN9v.png in Resources */,
-				02AD76E324F06DB300D0671F /* tests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
