@@ -22,7 +22,6 @@ FOUNDATION_EXPORT const unsigned char AgentVersionString[];
 #import "NewRelicFeatureFlags.h"
 #import "NRCustomMetrics.h"
 #import "NRLogger.h"
-#import "NRMAAgentVersion.h"
 #import "NRCustomMetrics.h"
 #import "NRTimer.h"
 #import "NRURLSessionTaskDelegateBase.h"
