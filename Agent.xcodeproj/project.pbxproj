@@ -92,11 +92,6 @@
 		0209AC4E24E7079400E45C90 /* NRMAAnalyticsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC4C24E7079400E45C90 /* NRMAAnalyticsTest.mm */; };
 		0209AC4F24E7079400E45C90 /* NRMARequestEvents.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC4D24E7079400E45C90 /* NRMARequestEvents.mm */; };
 		0209AC5124E707AB00E45C90 /* NRMAUserActionBuilderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC5024E707AB00E45C90 /* NRMAUserActionBuilderTest.m */; };
-		0209AC5224E70AF500E45C90 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE424DC894D00115469 /* Utilities.framework */; };
-		0209AC5324E70AF500E45C90 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47D424DB53FC00115469 /* Analytics.framework */; };
-		0209AC5424E70AF500E45C90 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
-		0209AC5524E70AF500E45C90 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
-		0209AC5624E70AF500E45C90 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
 		0209AC6224E7373200E45C90 /* NRTestHelperConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC6124E7373200E45C90 /* NRTestHelperConsumer.m */; };
 		0209AC6624E7391F00E45C90 /* NRMAWKNavigationDelegateBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC6524E7391F00E45C90 /* NRMAWKNavigationDelegateBaseTest.m */; };
 		0209AC8C24E7393300E45C90 /* NRMAInternalUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC6724E7392C00E45C90 /* NRMAInternalUtilsTests.m */; };
@@ -133,6 +128,26 @@
 		0209ACBC24E7546F00E45C90 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ACBB24E7546F00E45C90 /* CoreData.framework */; };
 		0209ACC124EB015E00E45C90 /* JdAWN9v.png in Resources */ = {isa = PBXBuildFile; fileRef = 0209ACC024EB015D00E45C90 /* JdAWN9v.png */; };
 		021A15BF24C9EEE700E8DFD5 /* Agent.h in Headers */ = {isa = PBXBuildFile; fileRef = 021A15BD24C9EEE700E8DFD5 /* Agent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		022A81CF25030A46003748E6 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CA25030A46003748E6 /* Hex.framework */; };
+		022A81D025030A46003748E6 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CA25030A46003748E6 /* Hex.framework */; };
+		022A81D125030A46003748E6 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CB25030A46003748E6 /* json.framework */; };
+		022A81D225030A46003748E6 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CB25030A46003748E6 /* json.framework */; };
+		022A81D325030A46003748E6 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CC25030A46003748E6 /* Connectivity.framework */; };
+		022A81D425030A46003748E6 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CC25030A46003748E6 /* Connectivity.framework */; };
+		022A81D525030A46003748E6 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CD25030A46003748E6 /* Utilities.framework */; };
+		022A81D625030A46003748E6 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CD25030A46003748E6 /* Utilities.framework */; };
+		022A81D725030A46003748E6 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CE25030A46003748E6 /* Analytics.framework */; };
+		022A81D825030A46003748E6 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CE25030A46003748E6 /* Analytics.framework */; };
+		022A81D92507E7CF003748E6 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CA25030A46003748E6 /* Hex.framework */; };
+		022A81DA2507E7D0003748E6 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CA25030A46003748E6 /* Hex.framework */; };
+		022A81DB2507E838003748E6 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CB25030A46003748E6 /* json.framework */; };
+		022A81DC2507E838003748E6 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CB25030A46003748E6 /* json.framework */; };
+		022A81DD2507E83A003748E6 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CC25030A46003748E6 /* Connectivity.framework */; };
+		022A81DE2507E83B003748E6 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CC25030A46003748E6 /* Connectivity.framework */; };
+		022A81DF2507E83F003748E6 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CD25030A46003748E6 /* Utilities.framework */; };
+		022A81E02507E840003748E6 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CD25030A46003748E6 /* Utilities.framework */; };
+		022A81E12507E845003748E6 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CE25030A46003748E6 /* Analytics.framework */; };
+		022A81E22507E845003748E6 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A81CE25030A46003748E6 /* Analytics.framework */; };
 		0253763124E33E0300BF220A /* libCrashReporter-tvOS-Device.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4D3424E321B300115469 /* libCrashReporter-tvOS-Device.a */; };
 		025657F524EB19BF00FE3125 /* NRMAExceptionMetaDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC7224E7392E00E45C90 /* NRMAExceptionMetaDataTest.m */; };
 		025657F624EB19BF00FE3125 /* NRMACrashReportTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209AC4824E7078C00E45C90 /* NRMACrashReportTest.m */; };
@@ -225,11 +240,6 @@
 		0256585124EB19BF00FE3125 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ACB824E7546000E45C90 /* UIKit.framework */; };
 		0256585224EB19BF00FE3125 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AEC24DC899500115469 /* SystemConfiguration.framework */; };
 		0256585324EB19BF00FE3125 /* NewRelic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021A15BA24C9EEE700E8DFD5 /* NewRelic.framework */; };
-		0256585424EB19BF00FE3125 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
-		0256585524EB19BF00FE3125 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
-		0256585624EB19BF00FE3125 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE424DC894D00115469 /* Utilities.framework */; };
-		0256585724EB19BF00FE3125 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47D424DB53FC00115469 /* Analytics.framework */; };
-		0256585824EB19BF00FE3125 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
 		0256585B24EB19BF00FE3125 /* testUploadFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0209ABAE24E7042C00E45C90 /* testUploadFile.txt */; };
 		0256585C24EB19BF00FE3125 /* JdAWN9v.png in Resources */ = {isa = PBXBuildFile; fileRef = 0209ACC024EB015D00E45C90 /* JdAWN9v.png */; };
 		025658BC24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 025658BB24EB2ED600FE3125 /* NRMAHandledExcaptionStressor.mm */; };
@@ -249,10 +259,6 @@
 		025658DE24ED97CE00FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		025658E224EDA93500FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
 		025658E324EDA93600FE3125 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0209ABAA24E7042B00E45C90 /* libOCMock.a */; };
-		02FF47CD24DB53F500115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
-		02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
-		02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
-		02FF47D524DB53FC00115469 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47D424DB53FC00115469 /* Analytics.framework */; };
 		02FF47D924DB563600115469 /* NewRelic.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FF47D824DB563600115469 /* NewRelic.m */; };
 		02FF47E824DB567600115469 /* NRLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47DD24DB567600115469 /* NRLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02FF47E924DB567600115469 /* NewRelicFeatureFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF47DE24DB567600115469 /* NewRelicFeatureFlags.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -614,7 +620,6 @@
 		02FF4AD024DC657B00115469 /* NRMANetworkFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = 02FF4ACB24DC657B00115469 /* NRMANetworkFacade.h */; };
 		02FF4AD124DC657B00115469 /* NRMAHTTPUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02FF4ACC24DC657B00115469 /* NRMAHTTPUtilities.mm */; };
 		02FF4AD224DC657B00115469 /* NRMANetworkFacade.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02FF4ACD24DC657B00115469 /* NRMANetworkFacade.mm */; };
-		02FF4AE524DC894D00115469 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE424DC894D00115469 /* Utilities.framework */; };
 		02FF4AE724DC897A00115469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE624DC897900115469 /* Foundation.framework */; };
 		02FF4AE924DC898000115469 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE824DC898000115469 /* libc++.tbd */; };
 		02FF4AEB24DC898900115469 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AEA24DC898800115469 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -1011,11 +1016,6 @@
 		02FF4C9D24E3201400115469 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AEC24DC899500115469 /* SystemConfiguration.framework */; };
 		02FF4C9F24E3201400115469 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE824DC898000115469 /* libc++.tbd */; };
 		02FF4CA024E3201400115469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE624DC897900115469 /* Foundation.framework */; };
-		02FF4CA124E3201400115469 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF4AE424DC894D00115469 /* Utilities.framework */; };
-		02FF4CA224E3201400115469 /* Connectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C724DB53F500115469 /* Connectivity.framework */; };
-		02FF4CA324E3201400115469 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C624DB53F500115469 /* Hex.framework */; };
-		02FF4CA424E3201400115469 /* json.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47C524DB53F400115469 /* json.framework */; };
-		02FF4CA524E3201400115469 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FF47D424DB53FC00115469 /* Analytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -1262,7 +1262,11 @@
 		021A15BA24C9EEE700E8DFD5 /* NewRelic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewRelic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		021A15BD24C9EEE700E8DFD5 /* Agent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
 		021A15BE24C9EEE700E8DFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		022A81C925030071003748E6 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		022A81CA25030A46003748E6 /* Hex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hex.framework; sourceTree = "<group>"; };
+		022A81CB25030A46003748E6 /* json.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = json.framework; sourceTree = "<group>"; };
+		022A81CC25030A46003748E6 /* Connectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Connectivity.framework; sourceTree = "<group>"; };
+		022A81CD25030A46003748E6 /* Utilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Utilities.framework; sourceTree = "<group>"; };
+		022A81CE25030A46003748E6 /* Analytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Analytics.framework; sourceTree = "<group>"; };
 		0256586024EB19BF00FE3125 /* Agent_tvos_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agent_tvos_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		025658A824EB2AAC00FE3125 /* Stress Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stress Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		025658AC24EB2AAC00FE3125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1280,10 +1284,6 @@
 		025658D624EB322F00FE3125 /* NRMAStressTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRMAStressTestHelper.h; sourceTree = "<group>"; };
 		025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAStressTestHelper.m; sourceTree = "<group>"; };
 		02AD76E124F06DB300D0671F /* tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
-		02FF47C524DB53F400115469 /* json.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = json.framework; sourceTree = "<group>"; };
-		02FF47C624DB53F500115469 /* Hex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hex.framework; sourceTree = "<group>"; };
-		02FF47C724DB53F500115469 /* Connectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Connectivity.framework; sourceTree = "<group>"; };
-		02FF47D424DB53FC00115469 /* Analytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Analytics.framework; sourceTree = "<group>"; };
 		02FF47D824DB563600115469 /* NewRelic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRelic.m; sourceTree = "<group>"; };
 		02FF47DD24DB567600115469 /* NRLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRLogger.h; sourceTree = "<group>"; };
 		02FF47DE24DB567600115469 /* NewRelicFeatureFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRelicFeatureFlags.h; sourceTree = "<group>"; };
@@ -1646,7 +1646,6 @@
 		02FF4ACC24DC657B00115469 /* NRMAHTTPUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NRMAHTTPUtilities.mm; sourceTree = "<group>"; };
 		02FF4ACD24DC657B00115469 /* NRMANetworkFacade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NRMANetworkFacade.mm; sourceTree = "<group>"; };
 		02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrashReporter.xcodeproj; path = "modular-crash-reporter-ios/CrashReporter.xcodeproj"; sourceTree = "<group>"; };
-		02FF4AE424DC894D00115469 /* Utilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Utilities.framework; sourceTree = "<group>"; };
 		02FF4AE624DC897900115469 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		02FF4AE824DC898000115469 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		02FF4AEA24DC898800115469 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
@@ -1673,17 +1672,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022A81DE2507E83B003748E6 /* Connectivity.framework in Frameworks */,
 				0209ACBC24E7546F00E45C90 /* CoreData.framework in Frameworks */,
+				022A81D92507E7CF003748E6 /* Hex.framework in Frameworks */,
 				0209ACBA24E7546600E45C90 /* CoreTelephony.framework in Frameworks */,
+				022A81E12507E845003748E6 /* Analytics.framework in Frameworks */,
 				025658DE24ED97CE00FE3125 /* libOCMock.a in Frameworks */,
+				022A81DF2507E83F003748E6 /* Utilities.framework in Frameworks */,
+				022A81DB2507E838003748E6 /* json.framework in Frameworks */,
 				0209ACB924E7546000E45C90 /* UIKit.framework in Frameworks */,
 				0209ACB724E7545A00E45C90 /* SystemConfiguration.framework in Frameworks */,
 				0209ABBD24E7054900E45C90 /* NewRelic.framework in Frameworks */,
-				0209AC5424E70AF500E45C90 /* Connectivity.framework in Frameworks */,
-				0209AC5624E70AF500E45C90 /* json.framework in Frameworks */,
-				0209AC5224E70AF500E45C90 /* Utilities.framework in Frameworks */,
-				0209AC5324E70AF500E45C90 /* Analytics.framework in Frameworks */,
-				0209AC5524E70AF500E45C90 /* Hex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1692,15 +1691,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				02FF4B0824DC8F1200115469 /* libCrashReporter.a in Frameworks */,
+				022A81D525030A46003748E6 /* Utilities.framework in Frameworks */,
+				022A81D325030A46003748E6 /* Connectivity.framework in Frameworks */,
 				02FF4AED24DC899500115469 /* SystemConfiguration.framework in Frameworks */,
+				022A81CF25030A46003748E6 /* Hex.framework in Frameworks */,
+				022A81D725030A46003748E6 /* Analytics.framework in Frameworks */,
 				02FF4AEB24DC898900115469 /* CoreTelephony.framework in Frameworks */,
 				02FF4AE924DC898000115469 /* libc++.tbd in Frameworks */,
+				022A81D125030A46003748E6 /* json.framework in Frameworks */,
 				02FF4AE724DC897A00115469 /* Foundation.framework in Frameworks */,
-				02FF4AE524DC894D00115469 /* Utilities.framework in Frameworks */,
-				02FF47CF24DB53F500115469 /* Connectivity.framework in Frameworks */,
-				02FF47CE24DB53F500115469 /* Hex.framework in Frameworks */,
-				02FF47CD24DB53F500115469 /* json.framework in Frameworks */,
-				02FF47D524DB53FC00115469 /* Analytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1709,14 +1708,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0256584F24EB19BF00FE3125 /* CoreData.framework in Frameworks */,
+				022A81E02507E840003748E6 /* Utilities.framework in Frameworks */,
+				022A81DD2507E83A003748E6 /* Connectivity.framework in Frameworks */,
 				0256585124EB19BF00FE3125 /* UIKit.framework in Frameworks */,
+				022A81DA2507E7D0003748E6 /* Hex.framework in Frameworks */,
+				022A81E22507E845003748E6 /* Analytics.framework in Frameworks */,
 				0256585224EB19BF00FE3125 /* SystemConfiguration.framework in Frameworks */,
 				0256585324EB19BF00FE3125 /* NewRelic.framework in Frameworks */,
-				0256585424EB19BF00FE3125 /* Connectivity.framework in Frameworks */,
-				0256585524EB19BF00FE3125 /* json.framework in Frameworks */,
-				0256585624EB19BF00FE3125 /* Utilities.framework in Frameworks */,
-				0256585724EB19BF00FE3125 /* Analytics.framework in Frameworks */,
-				0256585824EB19BF00FE3125 /* Hex.framework in Frameworks */,
+				022A81DC2507E838003748E6 /* json.framework in Frameworks */,
 				025658E224EDA93500FE3125 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1736,13 +1735,13 @@
 			files = (
 				0253763124E33E0300BF220A /* libCrashReporter-tvOS-Device.a in Frameworks */,
 				02FF4C9D24E3201400115469 /* SystemConfiguration.framework in Frameworks */,
+				022A81D225030A46003748E6 /* json.framework in Frameworks */,
+				022A81D625030A46003748E6 /* Utilities.framework in Frameworks */,
 				02FF4C9F24E3201400115469 /* libc++.tbd in Frameworks */,
+				022A81D825030A46003748E6 /* Analytics.framework in Frameworks */,
 				02FF4CA024E3201400115469 /* Foundation.framework in Frameworks */,
-				02FF4CA124E3201400115469 /* Utilities.framework in Frameworks */,
-				02FF4CA224E3201400115469 /* Connectivity.framework in Frameworks */,
-				02FF4CA324E3201400115469 /* Hex.framework in Frameworks */,
-				02FF4CA424E3201400115469 /* json.framework in Frameworks */,
-				02FF4CA524E3201400115469 /* Analytics.framework in Frameworks */,
+				022A81D425030A46003748E6 /* Connectivity.framework in Frameworks */,
+				022A81D025030A46003748E6 /* Hex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2054,7 +2053,6 @@
 		021A15B024C9EEE700E8DFD5 = {
 			isa = PBXGroup;
 			children = (
-				022A81C925030071003748E6 /* module.modulemap */,
 				0256586424EB284600FE3125 /* Tests */,
 				02FF4AEF24DC8CB200115469 /* flatbuffers */,
 				02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */,
@@ -2208,17 +2206,17 @@
 		02FF47D724DB54E600115469 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				022A81CE25030A46003748E6 /* Analytics.framework */,
+				022A81CC25030A46003748E6 /* Connectivity.framework */,
+				022A81CA25030A46003748E6 /* Hex.framework */,
+				022A81CB25030A46003748E6 /* json.framework */,
+				022A81CD25030A46003748E6 /* Utilities.framework */,
 				0209ACBB24E7546F00E45C90 /* CoreData.framework */,
 				0209ACB824E7546000E45C90 /* UIKit.framework */,
 				02FF4AEC24DC899500115469 /* SystemConfiguration.framework */,
 				02FF4AEA24DC898800115469 /* CoreTelephony.framework */,
 				02FF4AE824DC898000115469 /* libc++.tbd */,
 				02FF4AE624DC897900115469 /* Foundation.framework */,
-				02FF4AE424DC894D00115469 /* Utilities.framework */,
-				02FF47D424DB53FC00115469 /* Analytics.framework */,
-				02FF47C724DB53F500115469 /* Connectivity.framework */,
-				02FF47C624DB53F500115469 /* Hex.framework */,
-				02FF47C524DB53F400115469 /* json.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -4343,6 +4341,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -4406,6 +4405,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -4488,6 +4488,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SKIP_INSTALL = YES;
@@ -4526,6 +4527,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SKIP_INSTALL = YES;
@@ -4773,6 +4775,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SDKROOT = appletvos;
@@ -4813,6 +4816,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SDKROOT = appletvos;
