@@ -1283,7 +1283,7 @@
 		025658D224EB2F6400FE3125 /* NRMAActivityTraceMeasurementCreatorStressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAActivityTraceMeasurementCreatorStressor.m; sourceTree = "<group>"; };
 		025658D624EB322F00FE3125 /* NRMAStressTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRMAStressTestHelper.h; sourceTree = "<group>"; };
 		025658D724EB322F00FE3125 /* NRMAStressTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMAStressTestHelper.m; sourceTree = "<group>"; };
-		0264AB2325080523009E5514 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		0264AB2325080523009E5514 /* agent.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = agent.modulemap; sourceTree = "<group>"; };
 		02AD76E124F06DB300D0671F /* tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
 		02FF47D824DB563600115469 /* NewRelic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRelic.m; sourceTree = "<group>"; };
 		02FF47DD24DB567600115469 /* NRLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRLogger.h; sourceTree = "<group>"; };
@@ -2054,7 +2054,7 @@
 		021A15B024C9EEE700E8DFD5 = {
 			isa = PBXGroup;
 			children = (
-				0264AB2325080523009E5514 /* module.modulemap */,
+				0264AB2325080523009E5514 /* agent.modulemap */,
 				0256586424EB284600FE3125 /* Tests */,
 				02FF4AEF24DC8CB200115469 /* flatbuffers */,
 				02FF4AD424DC815300115469 /* CrashReporter.xcodeproj */,
@@ -4490,7 +4490,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = module.modulemap;
+				MODULEMAP_FILE = agent.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SKIP_INSTALL = YES;
@@ -4529,7 +4529,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = module.modulemap;
+				MODULEMAP_FILE = agent.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SKIP_INSTALL = YES;
@@ -4777,7 +4777,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = module.modulemap;
+				MODULEMAP_FILE = agent.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SDKROOT = appletvos;
@@ -4818,7 +4818,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = module.modulemap;
+				MODULEMAP_FILE = agent.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.newrelic.Agent;
 				PRODUCT_NAME = NewRelic;
 				SDKROOT = appletvos;
