@@ -18,8 +18,8 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(name: "NewRelic",
-                      url: "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_7.3.3.zip",
-                      checksum: "e5cff41cf847c6f4ad065ec2d72f22191c1924d79b6709f19fadea830c348e0c")
+                      url: "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_7.3.4.zip",
+                      checksum: "a553bdd1d6a183b3cac3b38da8fe81813ed30922d5aeec0336a637911f1c965f")
     ]
 )
 
