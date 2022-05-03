@@ -15,18 +15,24 @@ New Relic's mobile monitoring capabilities help you gain deeper visibility into 
 >If you receive an `artifact of binary target 'NewRelic' failed extraction: The operation couldn’t be completed. (TSCBasic.StringError error 1.)` error when extracting the package, please close Xcode, delete the Derrived Data folder, re-open Xcode, and try again.
   
 3. Select the NewRelic package product, select your target, and select Finish.
-4. In your `AppDelegate.swift` file, add this call as the first line of `applicationDidFinishLaunchWithOptions`, replacing `APP_TOKEN` with your [application token](/docs/mobile-apps/viewing-your-application-token):
+4. In your `AppDelegate.swift` file, add this call as the first line of `applicationDidFinishLaunchWithOptions`, replacing `APP_TOKEN` with your [application token](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token):
 
    ```
-   NewRelic.start(withApplicationToken:"<var>APP_TOKEN</var>")
+   NewRelic.start(withApplicationToken:"APP_TOKEN")
    ```
    To ensure proper instrumentation, you must call the agent on the first line of `didFinishLaunchingWithOptions()`, and run the agent on the main thread. Starting the call later, on a background thread, or asynchronously can cause unexpected or unstable behavior.
 
-5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following, replacing `APP_TOKEN` with your [application token](/docs/mobile-apps/viewing-your-application-token):
+5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following, replacing `APP_TOKEN` with your [application token](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token):
 
    ```
    SCRIPT=`/usr/bin/find "${SRCROOT}" -name newrelic_postbuild.sh | head -n 1`
-   /bin/sh "${SCRIPT}" "<var>APP_TOKEN</var>"
+
+   if [ -z "${SCRIPT}"]; then
+   ARTIFACT_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
+   SCRIPT=`/usr/bin/find "${ARTIFACT_DIR}" -name newrelic_postbuild.sh | head -n 1`
+   fi
+
+   /bin/sh "${SCRIPT}" "APP_TOKEN"
    ```
 6. Clean and build your app, then run it in the simulator or other device.
 
