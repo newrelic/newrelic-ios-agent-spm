@@ -19,7 +19,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(name: "NewRelic",
                       url: "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_7.3.7.zip",
-                      checksum: "f0173bc6cdaaad835ad416bc07e5b7f86d64521577e2d652abc68a103b954f48")
+                      checksum: "ef60c28655b7808675a490ab5b341c527bc6b4268ba652e5744fcae470cf17aa")
     ]
 )
 
