@@ -52,17 +52,21 @@ If you have previously created a Mobile Application:
 * download the New Relic agent for your platform and follow the instructions.
 
 ## Troubleshooting
-If an error such as artifact does not match checksum or cannot download framework from remoteSourceControl is encountered when adding swift package please try the following steps.
+If you receive an error when adding the Swift Package, such as
+- artifact does not match checksum
+- cannot download framework from remoteSourceControl
+
+please try the following steps:
 
 1. De-integrate New Relic swift package from Xcode Project
 
 1. run commands from Terminal to delete spm caches
-```
-rm -rf ~/Library/Caches/org.swift.swiftpm
-rm -rf ~/Library/org.swift.swiftpm
-```
-3. Delete Derived Data using Xcode.
-4. Re-Integrate New Relic swift package into Xcode project.
+    ```
+    rm -rf ~/Library/Caches/org.swift.swiftpm
+    rm -rf ~/Library/org.swift.swiftpm
+    ```
+1. Delete Derived Data using Xcode.
+1. Re-Integrate New Relic swift package into Xcode project.
 
 ## Support
 
