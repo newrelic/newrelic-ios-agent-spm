@@ -4,6 +4,9 @@
 
 New Relic's mobile monitoring capabilities help you gain deeper visibility into how to analyze your iOS application performance and troubleshoot crashes. You can also examine HTTP and other network performance for unexpected lag, which will in turn help you collaborate more efficiently with your backend teams.
 
+## Release Notes
+https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-release-notes/
+
 ## Installation
 1. Select **File > Swift Packages > Add Package Dependency...**.
 2. Add the Github URL of the Package file:
