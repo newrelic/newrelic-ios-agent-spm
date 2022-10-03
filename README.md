@@ -73,6 +73,8 @@ please try the following steps:
 
 ## Support
 
+Please visit [the New Relic Support page](https://support.newrelic.com/) for help with any issues you encounter with our agents.
+
 **A note about vulnerabilities**
 
 As noted in our [security policy](../../security/policy), New Relic is committed to the privacy and security of our customers and their data. We believe that providing coordinated disclosure by security researchers and engaging with the security community are important means to achieve our security goals.
