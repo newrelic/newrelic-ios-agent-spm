@@ -27,17 +27,33 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
 
 5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following, replacing `APP_TOKEN` with your [application token](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token):
 
+    - iOS Agent 7.4.0+:
    ```
+   "${BUILD_DIR%/Build/*}/SourcePackages/artifacts/newrelic-ios-agent-spm/NewRelic.xcframework/Resources/run-symbol-tool" "APP_TOKEN"
+   ```
+    - iOS Agent 7.3.8 or before:
+    ```
    SCRIPT=`/usr/bin/find "${SRCROOT}" -name newrelic_postbuild.sh | head -n 1`
 
    if [ -z "${SCRIPT}"]; then
-   ARTIFACT_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
-   SCRIPT=`/usr/bin/find "${ARTIFACT_DIR}" -name newrelic_postbuild.sh | head -n 1`
+    ARTIFACT_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
+    SCRIPT=`/usr/bin/find "${ARTIFACT_DIR}" -name newrelic_postbuild.sh | head -n 1`
    fi
 
    /bin/sh "${SCRIPT}" "APP_TOKEN"
    ```
-6. Clean and build your app, then run it in the simulator or other device.
+
+   - Add the following lines to your build script above the existing lines to skip symbol upload during debugging.
+    ```
+    if [ ${CONFIGURATION} = "Debug" ]; then
+        echo "Skipping DSYM upload CONFIGURATION: ${CONFIGURATION}"
+        exit 0
+    fi
+    ```
+
+6. If there is a checkbox below Run script that says "Run script: Based on Dependency analysis" please make sure it is not checked.
+
+7. Clean and build your app, then run it in the simulator or other device.
 
 
 ## Getting Started
@@ -55,21 +71,20 @@ If you have previously created a Mobile Application:
 * download the New Relic agent for your platform and follow the instructions.
 
 ## Troubleshooting
-If you receive an error when adding the Swift Package, such as
-- artifact does not match checksum
-- cannot download framework from remoteSourceControl
+You might see the following errors when adding the Swift package:
+- Artifact does not match checksum
+- Cannot download framework from remoteSourceControl
 
-please try the following steps:
+If you see these types of errors, try the following:
 
-1. De-integrate New Relic swift package from Xcode Project
-
-1. run commands from Terminal to delete spm caches
+1. De-integrate New Relic Swift package from the Xcode project.
+2. Run these commands from the terminal to delete spm caches:
     ```
     rm -rf ~/Library/Caches/org.swift.swiftpm
     rm -rf ~/Library/org.swift.swiftpm
     ```
-1. Delete Derived Data using Xcode.
-1. Re-Integrate New Relic swift package into Xcode project.
+3. Delete derived data using Xcode.
+4. Re-integrate the New Relic Swift package into the Xcode project.
 
 ## Support
 
