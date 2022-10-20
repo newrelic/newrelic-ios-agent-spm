@@ -43,6 +43,14 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
    /bin/sh "${SCRIPT}" "APP_TOKEN"
    ```
 
+   - Add the following lines to your build script above the existing lines to skip symbol upload during debugging.
+    ```
+    if [ ${CONFIGURATION} = "Debug" ]; then
+        echo "Skipping DSYM upload CONFIGURATION: ${CONFIGURATION}"
+        exit 0
+    fi
+    ```
+
 6. If there is a checkbox below Run script that says "Run script: Based on Dependency analysis" please make sure it is not checked.
 
 7. Clean and build your app, then run it in the simulator or other device.
