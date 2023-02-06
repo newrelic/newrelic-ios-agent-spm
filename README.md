@@ -25,7 +25,7 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
    ```
    To ensure proper instrumentation, you must call the agent on the first line of `didFinishLaunchingWithOptions()`, and run the agent on the main thread. Starting the call later, on a background thread, or asynchronously can cause unexpected or unstable behavior.
 
-5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following snippet, replacing `APP_TOKEN` with your [application token](/docs/mobile-apps/viewing-your-application-token):
+5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following snippet, replacing `APP_TOKEN` with your [application token](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token):
  - Depending on your agent version add the code block below.
     - Use this line as your run script on **iOS Agent 7.4.0+**:
    ```
