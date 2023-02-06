@@ -12,7 +12,7 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
 2. Add the Github URL of the Package file:
   
   ```
-  https://github.com/newrelic/newrelic-ios-sdk
+  https://github.com/newrelic/newrelic-ios-agent-spm
   ```
   
 >If you receive an `artifact of binary target 'NewRelic' failed extraction: The operation couldn’t be completed. (TSCBasic.StringError error 1.)` error when extracting the package, please close Xcode, delete the Derrived Data folder, re-open Xcode, and try again.
@@ -25,13 +25,14 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
    ```
    To ensure proper instrumentation, you must call the agent on the first line of `didFinishLaunchingWithOptions()`, and run the agent on the main thread. Starting the call later, on a background thread, or asynchronously can cause unexpected or unstable behavior.
 
-5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following, replacing `APP_TOKEN` with your [application token](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token):
+5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following snippet, replacing `APP_TOKEN` with your [application token](/docs/mobile-apps/viewing-your-application-token):
+    - Use this line as your run script on **iOS Agent 7.4.0+**:
+Depending on your agent version add the code block below.
 
-    - iOS Agent 7.4.0+:
    ```
    "${BUILD_DIR%/Build/*}/SourcePackages/artifacts/newrelic-ios-agent-spm/NewRelic.xcframework/Resources/run-symbol-tool" "APP_TOKEN"
    ```
-    - iOS Agent 7.3.8 or before:
+    - For **iOS Agent 7.3.8** or before you must use the following 6 line script:
     ```
    SCRIPT=`/usr/bin/find "${SRCROOT}" -name newrelic_postbuild.sh | head -n 1`
 
@@ -43,7 +44,7 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
    /bin/sh "${SCRIPT}" "APP_TOKEN"
    ```
 
-   - Add the following lines to your build script above the existing lines to skip symbol upload during debugging.
+   Optional Step: Add the following lines to your build script above the existing lines to skip symbol upload during debugging.
     ```
     if [ ${CONFIGURATION} = "Debug" ]; then
         echo "Skipping DSYM upload CONFIGURATION: ${CONFIGURATION}"
