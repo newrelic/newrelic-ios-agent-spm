@@ -28,23 +28,25 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
 5. Add a build script to your target's **Build Phases**. Ensure the new build script is the very last build script. Then paste the following snippet, replacing `APP_TOKEN` with your [application token](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/maintenance/viewing-your-application-token):
  - Depending on your agent version add the code block below.
     - Use this line as your run script on **iOS Agent 7.4.0+**:
-   ```
-   "${BUILD_DIR%/Build/*}/SourcePackages/artifacts/newrelic-ios-agent-spm/NewRelic.xcframework/Resources/run-symbol-tool" "APP_TOKEN"
+   ```sh
+   ARTIFACT_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
+   SCRIPT=`/usr/bin/find "${SRCROOT}" "${ARTIFACT_DIR}" -type f -name run-symbol-tool | head -n 1`
+   /bin/sh "${SCRIPT}" "APP_TOKEN"
    ```
     - For **iOS Agent 7.3.8** or before you must use the following 6 line script:
-    ```
-   SCRIPT=`/usr/bin/find "${SRCROOT}" -name newrelic_postbuild.sh | head -n 1`
+    ```sh
+    SCRIPT=`/usr/bin/find "${SRCROOT}" -name newrelic_postbuild.sh | head -n 1`
 
-   if [ -z "${SCRIPT}"]; then
+    if [ -z "${SCRIPT}"]; then
     ARTIFACT_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
     SCRIPT=`/usr/bin/find "${ARTIFACT_DIR}" -name newrelic_postbuild.sh | head -n 1`
-   fi
+    fi
 
-   /bin/sh "${SCRIPT}" "APP_TOKEN"
+    /bin/sh "${SCRIPT}" "APP_TOKEN"
    ```
 
 - Optional Step: Add the following lines to your build script above the existing lines to skip symbol upload during debugging.
-    ```
+    ```sh
     if [ ${CONFIGURATION} = "Debug" ]; then
         echo "Skipping DSYM upload CONFIGURATION: ${CONFIGURATION}"
         exit 0
