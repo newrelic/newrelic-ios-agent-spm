@@ -29,7 +29,7 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
  - Depending on your agent version add the code block below.
     - Use this line as your run script on **iOS Agent 7.4.0+**:
    ```sh
-   ARTIFACT_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
+   ARTIFACT_DIR="${BUILD_DIR%Build/*}"
    SCRIPT=`/usr/bin/find "${SRCROOT}" "${ARTIFACT_DIR}" -type f -name run-symbol-tool | head -n 1`
    /bin/sh "${SCRIPT}" "APP_TOKEN"
    ```
