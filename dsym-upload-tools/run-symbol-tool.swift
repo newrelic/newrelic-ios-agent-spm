@@ -8,12 +8,23 @@
 // 1. In Xcode, select your project in the navigator, then click on the application target.
 // 2. Select the Build Phases tab in the settings editor.
 // 3. Click the + icon above Target Dependencies and choose New Run Script Build Phase.
-// 4. Add the following line of code to the new phase, pasting in the
-//     application token from your New Relic dashboard for the app in question.
+// 4. Add the following lines of code to the new phase, pasting in the
+//     application token as "APP_TOKEN" from your New Relic dashboard for the app in question.
 // 
-//  "${BUILD_DIR%/Build/*}/SourcePackages/artifacts/newrelic-ios-agent-spm/NewRelic.xcframework/Resources/run-symbol-tool" "APP_TOKEN"
-// 
+// ```
+//  SCRIPT=`/usr/bin/find "${SRCROOT}/../.." -name run-symbol-tool | head -n 1`
+//  /bin/sh "${SCRIPT}" "APP_TOKEN"
+// ```
+//
 // Optional:
+//
+// Add "--debug" after script invocation to enable debug logs in the output upload_dsym_results.log file.
+//
+// ```
+//  SCRIPT=`/usr/bin/find "${SRCROOT}/../.." -name run-symbol-tool | head -n 1`
+//  /bin/sh "${SCRIPT}" "APP_TOKEN" --debug
+// ```
+//
 // DSYM_UPLOAD_URL - define this environment variable above run script to override the New Relic server hostname
 //
 // - Due to limitations with Swift scripting run-symbol-tool.swift is one file.
@@ -32,6 +43,16 @@ let environment = ProcessInfo.processInfo.environment
 var debug = false
 // Set to true for dSYM upload feature. (dSYM files are normally only uploaded if map file conversion fails.)
 let uploadDsymsOnly = false
+
+var symbolEndpointPath = "map"
+var dsymEndpointPath   = "symbol"
+var symbolUploadDataPostKey = "upload"
+var dsymUploadDataPostKey   = "dsym"
+
+var versionNumber = "7.4.10"
+var osName = "iOS"
+var platformName = "Native"
+var appVersionNumber = "1.2.3"
 
 enum SymbolToolError: Error {
     case failedToConvert
@@ -71,8 +92,17 @@ func start() {
         }
     }
 
+// Start Configure Env Vars //
+    /// Grab URLs and Keys from environment variables. 
     // Grab URL from set Env Var "$DSYM_UPLOAD_URL" or use default URL.
     var url = environment["DSYM_UPLOAD_URL"] ?? defaultURL
+    symbolEndpointPath = environment["NEWRELIC_SYMBOL_ENDPOINT"] ?? "map"
+    dsymEndpointPath   = environment["NEWRELIC_DSYM_ENDPOINT"] ?? "symbol"
+
+    symbolUploadDataPostKey = environment["NEWRELIC_SYMBOL_POST_KEY"] ?? "upload"
+    dsymUploadDataPostKey   = environment["NEWRELIC_DSYM_POST_KEY"] ?? "dsym"
+// End Configure Env Vars //
+
 
     if let regionAwareURL = parseRegionFromApiKey(apiKey) {
         url = regionAwareURL
@@ -170,8 +200,16 @@ func zipAndUploadDsym(_ dsymPath: String, _ apiKey: String, _ url: String) throw
 
                 print("successfully zipped dSYM to \(archiveUrl)")
 
+                // get size @ archiveUrl 
+                guard let size = getSizeAtURL(archiveUrl) else { 
+                    print("Failed to get fileSize. --failing")
+                    return 
+                }
+                if debug {
+                    print("Detected zipped dSYM file size = \(size). Uploading...")
+                }
                 // Now that we have archiveUrl with the dSYM file zipped up, upload the zip file.
-                let dsymUploadResult = try uploadFile(archiveUrl.path, apiKey, url, true)
+                let dsymUploadResult = try uploadFile(archiveUrl.path, apiKey, url, true, size)
                 if dsymUploadResult == "201" {
                     print("Successfully uploaded dSYM: \(archiveUrl.path)")
                 }
@@ -271,8 +309,17 @@ func processDsym(_ path: String, _ apiKey: String, _ url: String) throws {
             archiveUrl = temporaryURL
 
             if let archiveUrl = archiveUrl {
+
+                // get size @ archiveUrl 
+                guard let size = getSizeAtURL(archiveUrl) else { 
+                    print("Failed to get fileSize. --failing")
+                    return 
+                }
+                if debug {
+                    print("Detected zipped map file size = \(size). Uploading...")
+                }
                 // Now that we have archiveUrl with the combined map files zipped up, upload the map file.
-                let mapUploadResult = try uploadFile(archiveUrl.path, apiKey, url, false)
+                let mapUploadResult = try uploadFile(archiveUrl.path, apiKey, url, false, size)
                 if mapUploadResult == "201" {
                     print("Successfully uploaded map: \(archiveUrl.path)")
                 }
@@ -436,10 +483,14 @@ func padHex(_ hexString: String) -> String {
  }
 
 // Networking via curl
-func uploadFile(_ path: String, _ apiKey: String, _ url: String, _ isDsym: Bool) throws -> String? {
+func uploadFile(_ path: String, _ apiKey: String, _ url: String, _ isDsym: Bool, _ size: UInt64) throws -> String? {
     var resultFromCurl: String? = nil
     do {
-        let command = "curl --retry 3 --write-out %{http_code} --silent --output /dev/null -F \(isDsym ? "dsym" : "upload")=@\"\(path)\" -H \"x-app-license-key: \(apiKey)\" \(url)/\(isDsym ? "symbol" : "map")"
+        let command = "curl --retry 3 --write-out %{http_code} --silent --output /dev/null -F \(isDsym ? dsymUploadDataPostKey : symbolUploadDataPostKey)=@\"\(path)\" -H \"x-app-license-key: \(apiKey)\" -H \"X-NewRelic-Agent-Version: \(versionNumber)\" -H \"X-NewRelic-OS-Name: \(osName)\" -H \"X-NewRelic-Platform: \(platformName)\" -H \"X-NewRelic-App-Version: \(appVersionNumber)\" -H \"X-File-Size: \(size)\" \(url)/\(isDsym ? dsymEndpointPath : symbolEndpointPath)"
+
+       // let command = "curl --retry 3 --write-out %{http_code} --silent --output /dev/null -F \(isDsym ? "dsym" : "upload")=@\"\(path)\" -H \"x-app-license-key: \(apiKey)\" -H \"Content-Disposition: attachment\" -H \"X-File-Size: \(size)\" \(url)/\(isDsym ? "symbol" : "map")"
+
+
         if debug { print("Executing $ \(command)") }
         resultFromCurl = try shell(command)
     } catch {
@@ -484,5 +535,20 @@ extension String {
             return self
         }
         return String(self[...index])
+    }
+}
+
+func getSizeAtURL(_ url: URL) -> UInt64? {
+    do {
+        let attrs = try fileManager.attributesOfItem(atPath: url.path)
+        guard let fileSize = attrs[.size] as? UInt64 else { 
+            print("Failed to acquire ")
+            return nil 
+        }
+        return fileSize
+    }
+    catch {
+        print("Error loading file attribute size. --failing")
+        return nil
     }
 }
