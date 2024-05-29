@@ -53,6 +53,10 @@ https://docs.newrelic.com/docs/release-notes/mobile-release-notes/xcframework-re
     fi
     ```
 
+- ### Other notes for Cocoapods or manual XCFramework integration:
+With the 7.4.6 release the dsym-upload-tools are no longer included inside the XCFramework. The dsym-upload-tools are available in the dsym-upload-tools folder of the https://github.com/newrelic/newrelic-ios-agent-spm Swift Package Manager repository. Please copy this dsym-upload-tools directory to your applications source code directory if you are integrating the New Relic iOS Agent by copying XCFramework into project or using cocoapods.
+
+
 6. If there is a checkbox below Run script that says "Run script: Based on Dependency analysis" please make sure it is not checked.
 
 7. Clean and build your app, then run it in the simulator or other device.
