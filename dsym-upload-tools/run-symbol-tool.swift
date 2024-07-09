@@ -144,7 +144,7 @@ func start() {
     
     if debug { print("dSYMs located at: \(dSYMPaths)") }
     guard !dSYMPaths.isEmpty else {
-        print("Error: No dSYMs found to process. Make sure your Xcode project target build setting 'Debug Information Format' is set to 'DWARF with dSYM File'.  Exiting.")
+        print("Error: No dSYMs found to process. Make sure your Xcode project target build setting 'Debug Information Format' is set to 'DWARF with dSYM File'. Exiting.")
         exit(1)
     }
     // Attempt to convert each dSYM to a New Relic map file. If an error is encountered during conversion or map upload the dSYMs will be uploaded.
