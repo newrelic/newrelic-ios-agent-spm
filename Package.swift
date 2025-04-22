@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "NewRelic",
     platforms: [
-        .iOS(.v9), .macOS(.v10_14), .tvOS(.v9), .watchOS(.v10)
+        .iOS(.v12), .macOS(.v10_14), .tvOS(.v12), .watchOS(.v10)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -19,8 +19,8 @@ let package = Package(
             name: "NewRelicPackage",
             dependencies: []),
         .binaryTarget(name: "NewRelic",
-                      url: "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_7.5.4.zip",
-                      checksum: "e2fc9c71d01c479cb2ed3bd0063e99dc6db22548f98eef7acd663e15346c1f2f")
+                      url: "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_7.5.5.zip",
+                      checksum: "a5bbf601f11dae051db48be2ea7d1a9e0018b7afad96c5c74387bb34f2750960")
     ]
 )
 
