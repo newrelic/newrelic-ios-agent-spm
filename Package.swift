@@ -19,8 +19,8 @@ let package = Package(
             name: "NewRelicPackage",
             dependencies: []),
         .binaryTarget(name: "NewRelic",
-                      url: "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_7.7.0.zip",
-                      checksum: "1375af3b8e7fddd1e0ea2692582ee18bc670a09649636531f31180e816e86cb3")
+                      url: "https://download.newrelic.com/ios_agent/NewRelic_XCFramework_Agent_7.7.1.zip",
+                      checksum: "e940fbfad163f774cb9531f94e0f0a35ac14bb32f49ce215e5e010725710a135")
     ]
 )
 
